@@ -1,59 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ju-Young Kim (Alex) - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">홈</a></li>
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#contact">연락처</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#email">Email</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#resume">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>홍길동의 포트폴리오</h1>
-            <p>웹 개발자 | UX 디자이너 | 창의적 문제 해결사</p>
-        </section>
-
-        <section id="projects">
-            <h2>프로젝트</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <img src="project1.jpg" alt="프로젝트 1">
-                    <h3>프로젝트 1</h3>
-                    <p>React를 사용한 웹 애플리케이션</p>
+        <section id="overview">
+            <div class="profile">
+                <div id="model-container"></div>
+                <div class="profile-info">
+                    <h1>Ju-Young Kim (Alex)</h1>
+                    <p>Game developer, animator, 2D/3D artist</p>
                 </div>
-                <div class="project-item">
-                    <img src="project2.jpg" alt="프로젝트 2">
-                    <h3>프로젝트 2</h3>
-                    <p>Node.js 백엔드 서비스</p>
-                </div>
-                <!-- 추가 프로젝트 아이템 -->
+            </div>
+            <div class="skills">
+                <span>C/C++</span>
+                <span>Python</span>
+                <span>Javascript</span>
+                <span>HTML/CSS</span>
+                <span>Maya</span>
+                <span>Blender</span>
+                <span>Unity</span>
+                <span>Unreal Engine 5</span>
+                <span>Zbrush</span>
+                <span>Adobe series</span>
             </div>
         </section>
 
-        <section id="about">
-            <h2>소개</h2>
-            <p>안녕하세요, 저는 웹 개발과 UX 디자인에 열정을 가진 홍길동입니다. 사용자 중심의 직관적인 인터페이스를 만드는 것을 좋아합니다.</p>
+        <section id="featured">
+            <h2>Featured</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1</p>
+                    <div class="tags">
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
+                    <div class="tags">
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3</p>
+                    <div class="tags">
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>연락처</h2>
-            <p>이메일: hong@example.com</p>
-            <p>GitHub: <a href="https://github.com/honggildong">github.com/honggildong</a></p>
+        <section id="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <div class="category" style="background-image: url('images/games.jpg');">
+                    <span>Games</span>
+                </div>
+                <div class="category" style="background-image: url('images/game-jams.jpg');">
+                    <span>Game Jams</span>
+                </div>
+                <div class="category" style="background-image: url('images/animations.jpg');">
+                    <span>Animations</span>
+                </div>
+                <div class="category" style="background-image: url('images/2d-arts.jpg');">
+                    <span>2D Arts</span>
+                </div>
+                <div class="category" style="background-image: url('images/3d-arts.jpg');">
+                    <span>3D Arts</span>
+                </div>
+                <div class="category" style="background-image: url('images/fx-arts.jpg');">
+                    <span>FX Arts</span>
+                </div>
+                <div class="category" style="background-image: url('images/about.jpg');">
+                    <span>About</span>
+                </div>
+                <div class="category" style="background-image: url('images/weight-lifting.jpg');">
+                    <span>Weight Lifting Blog</span>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 홍길동. All rights reserved.</p>
+        <p>&copy; 2024 Ju-Young Kim (Alex). All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
