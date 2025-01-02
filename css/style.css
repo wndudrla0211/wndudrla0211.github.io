@@ -8,9 +8,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: #000000;
     background-color: #0a0a0a;
-    background-image: url('../images//background/background.jpg');
+    background-image: url('../images/background/white.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -87,7 +87,7 @@ main {
 .profile-info h1 {
     margin: 0 0 0.5rem 0;
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 .blue-text {
@@ -104,8 +104,8 @@ main {
 }
 
 .skills span {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+    background: rgba(105, 68, 68, 0.15);
+    color: #000000;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -222,7 +222,7 @@ main {
 }
 /* Game Jams 카테고리에만 이미지 적용 */
 .category[href="html/2darts.html"] {
-    background-image: url('../images/models/cgt\ 118\ final\ project\ ju-young\ kim\(alex\).jpg');
+    background-image: url('../images/models/cgt 118 final project ju-young kim(alex).jpg');
 }
 
 .category span {
@@ -364,4 +364,9 @@ div > a:hover {
 /* 현재 페이지 제목을 흰색으로 */
 .breadcrumb span:last-of-type {
     color: #ffffff;
+}
+
+/* 2D Arts 페이지 배경 설정 */
+body[class="2darts-page"] {
+    background-image: url('../images/background/white.png');
 }
