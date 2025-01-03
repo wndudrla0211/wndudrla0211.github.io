@@ -1,63 +1,46 @@
 .game-jams {
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
 }
 
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
 }
 
 .game-card {
-    position: relative;
+    width: 100%;
     background: rgba(25, 25, 25, 0.75);
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.2s;
-    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.game-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(25, 25, 25, 0.85) 0%,
-        rgba(0, 12, 24, 0.75) 100%
-    );
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.game-card:hover::before {
-    opacity: 0.7;
+.game-card:hover {
+    transform: translateY(-5px);
 }
 
 .game-image {
-    position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 비율 */
-    z-index: 2;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
 }
 
 .game-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .game-info {
-    position: relative;
-    z-index: 2;
-    padding: 15px;
+    padding: 20px;
+    text-align: left;
 }
 
 .game-info h2 {
@@ -112,39 +95,20 @@
     font-size: 1.1em;
 }
 
-.breadcrumb {
-    background: rgba(25, 25, 25, 0.95);
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-
-.breadcrumb nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    color: #969696;
-}
-
-.breadcrumb a {
-    color: #969696;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.breadcrumb a:hover {
-    color: #00ffff;
-}
-
-.breadcrumb .separator {
-    margin: 0 8px;
-    color: #969696;
-}
-
-/* 현재 페이지는 마지막 링크에 스타일 적용 */
-.breadcrumb a:last-of-type {
-    color: #ffffff;
-}
-
 footer {
     margin-top: 200px;
     padding-bottom: 30px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-jams {
+        padding: 0 10px 40px;
+    }
 }

@@ -48,7 +48,7 @@ nav ul li a:hover {
 
 
 .about-section {
-    padding: 20px;
+    padding: 0 20px 20px;
 }
 
 .about-section h1 {
@@ -109,38 +109,6 @@ nav ul li a:hover {
 .about-content > * {
     position: relative;
     z-index: 2;
-}
-
-.breadcrumb {
-    background: rgba(25, 25, 25, 0.95);
-    padding: 10px 20px;
-    margin-bottom: 20px;
-}
-
-.breadcrumb nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    color: #969696;
-}
-
-.breadcrumb a {
-    color: #969696;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.breadcrumb a:hover {
-    color: #00ffff;
-}
-
-.breadcrumb .separator {
-    margin: 0 8px;
-    color: #969696;
-}
-
-/* 현재 페이지는 마지막 링크에 스타일 적용 */
-.breadcrumb a:last-of-type {
-    color: #ffffff;
 }
 
 footer {
