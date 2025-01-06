@@ -215,6 +215,11 @@ main {
 .category[href="html/2darts.html"] {
     background-image: url('../images/models/cgt 118 final project ju-young kim(alex).jpg');
 }
+/* Game Jams 카테고리에만 이미지 적용 */
+.category[href="html/blog.html"] {
+    background-image: url('../images/models/gym.jpg');
+}
+
 
 .category span {
     color: #ffffff;
