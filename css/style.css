@@ -117,7 +117,7 @@ main {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     width: 100%;
 }
@@ -218,6 +218,10 @@ main {
 /* Game Jams 카테고리에만 이미지 적용 */
 .category[href="html/blog.html"] {
     background-image: url('../images/models/gym.jpg');
+}
+/* Game Jams 카테고리에만 이미지 적용 */
+.category[href="html/balancepatches.html"] {
+    background-image: url('../images/models/patch.png');
 }
 
 
@@ -385,4 +389,28 @@ h2 {
 
 .breadcrumb nav a:hover {
     color: #fff;  /* 모든 링크에 호버 효과 적용 */
+}
+
+@media (max-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
 }

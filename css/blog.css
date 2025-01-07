@@ -27,6 +27,33 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+    background: rgba(25, 25, 25, 0.75);
+    border-radius: 10px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.routine-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.85) 0%,
+        rgba(0, 12, 24, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.routine-container > *, .shake-container > * {
+    position: relative;
+    z-index: 2;
 }
 
 .routine-card {
@@ -59,6 +86,7 @@
 }
 
 .routine-card li {
+    color: #2c3e50;
     padding: 0.5rem 0;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -107,8 +135,8 @@
 
 .ingredients li,
 .nutrition li {
-    padding: 0.3rem 0;
     color: #666;
+    padding: 0.3rem 0;
     display: contents;
 }
 
@@ -116,6 +144,7 @@
 .nutrition li::before {
     content: attr(data-label);
     font-weight: bold;
+    color: #34495e;
 }
 
 @media (max-width: 768px) {
@@ -152,4 +181,50 @@ body > h2 {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.1rem;
+}
+
+.workout-content {
+    background: rgba(25, 25, 25, 0.75);
+    border-radius: 10px;
+    padding: 30px;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.workout-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.85) 0%,
+        rgba(0, 12, 24, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.workout-content > * {
+    position: relative;
+    z-index: 2;
+}
+
+.routine-container, .shake-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.section-header {
+    margin: 40px 0;
+}
+
+.section-header:first-child {
+    margin-top: 0;
 }
