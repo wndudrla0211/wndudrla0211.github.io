@@ -69,6 +69,7 @@ main {
     align-items: flex-start;
     padding: 2rem 0;
     width: 100%;
+    position: relative;
 }
 
 .profile-info {
@@ -117,7 +118,7 @@ main {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
 }
@@ -402,7 +403,7 @@ h2 {
 
 @media (max-width: 992px) {
     .category-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -416,4 +417,40 @@ h2 {
     .category-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.social-icons {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons li a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #007bff;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+.nav-icon i {
+    font-size: 16px;
+}
+
+.nav-icon:hover {
+    color: #00ffff;
 }
