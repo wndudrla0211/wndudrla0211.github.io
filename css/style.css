@@ -245,6 +245,13 @@ main {
     background-position: center;
 }
 
+/* FX Arts 카테고리 */
+.category[href="html/fxarts.html"] {
+    background-image: url('../images/models/fx2.png');
+    background-size: cover;
+    background-position: center;
+}
+
 .category span {
     color: #ffffff;
     font-weight: bold;
