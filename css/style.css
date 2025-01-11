@@ -204,29 +204,45 @@ main {
     background-position: center;
 }
 
-/* Game Jams 카테고리에만 이미지 적용 */
+/* Games 카테고리 */
+.category[href="html/games.html"] {
+    background-image: url('../images/game screenshots/screen1.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Game Jams 카테고리 */
 .category[href="html/gamejams.html"] {
     background-image: url('../images/game screenshots/inchainity 1.jpg');
+    background-size: cover;
+    background-position: center center;
 }
-/* Game Jams 카테고리에만 이미지 적용 */
+
 .category[href="html/about.html"] {
     background-image: url('../images/models/aboutme.jpg');
 }
-/* Game Jams 카테고리에만 이미지 적용 */
+
 .category[href="html/2darts.html"] {
     background-image: url('../images/models/cgt 118 final project ju-young kim(alex).jpg');
 }
-/* Game Jams 카테고리에만 이미지 적용 */
+
 .category[href="html/blog.html"] {
     background-image: url('../images/models/gym.jpg');
 }
-/* Game Jams 카테고리에만 이미지 적용 */
+
 .category[href="html/balancepatches.html"] {
     background-image: url('../images/models/patch.png');
 }
-/* Game Jams 카테고리에만 이미지 적용 */
+
 .category[href="html/gamedesign.html"] {
     background-image: url('../images/models/gamedesign.png');
+}
+
+/* 3D Art 카테고리 */
+.category[href="html/3dart.html"] {
+    background-image: url('../images/models/3d1.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .category span {
@@ -521,4 +537,148 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.featured {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: none;
+    background-image: url('../images/game screenshots/screen1.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.featured::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.featured-content {
+    position: relative;
+    z-index: 2;
+}
+
+.featured .project-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.featured h2 {
+    font-size: 2em;
+    margin: 5px 0;
+    color: white;
+}
+
+.featured .subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.featured .tags {
+    margin-top: 10px;
+}
+
+.featured .tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.featured[href="html/project1.html"] {
+    background-image: url('../images/game screenshots/screen1.png');
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.featured-card {
+    position: relative;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    text-decoration: none;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+    transition: transform 0.3s ease;
+}
+
+.featured-card[href="html/project1.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/game screenshots/screen1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-card:visited {
+    color: white;
+}
+
+.featured-card:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+.featured-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.featured-card p {
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.featured-card .tags {
+    margin-top: 10px;
+}
+
+.featured-card .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.project-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-card[href="html/project2.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/project2-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-card[href="html/project3.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/project3-bg.png');
+    background-size: cover;
+    background-position: center;
 }

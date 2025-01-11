@@ -1,0 +1,101 @@
+.page-title {
+    text-align: left;
+    font-size: 2.5em;
+    margin: 60px 0;
+    color: var(--text-primary);
+    padding-left: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arts-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.art-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.art-item {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.art-item:hover {
+    transform: translateY(-5px);
+}
+
+.art-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+}
+
+.sketchfab-embed-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.art-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.art-details h2 {
+    font-size: 1.5em;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.art-description {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.art-medium {
+    font-size: 0.9em;
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 1024px) {
+    .art-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2em;
+        margin: 40px 0;
+        padding-left: 10px;
+    }
+
+    .arts-section {
+        padding: 0 10px 40px;
+    }
+
+    .art-item {
+        max-width: 100%;
+    }
+}
