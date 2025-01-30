@@ -1,3 +1,20 @@
+/* 폰트 선언 제거 - style.css에서 상속 */
+.art-details h2,
+.page-title,
+.art-description,
+.art-medium {
+    font-family: inherit;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Condensed';
+    src: url('../fonts/HELVETNC.TTF') format('truetype');
+}
+
+body {
+    font-family: 'Helvetica Neue Condensed', Arial, sans-serif;
+}
+
 .page-title {
     text-align: left;  /* 왼쪽 정렬로 변경 */
     font-size: 2.5em;

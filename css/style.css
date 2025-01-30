@@ -1,10 +1,15 @@
+/* Font Awesome CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Font Face */
 @font-face {
-    font-family: 'HELVETICA';
+    font-family: 'HELVETNC';
     src: url('../fonts/HELVETNC.TTF') format('truetype');
 }
 
+/* Global Styles */
 body {
-    font-family: 'HELVETICA';
+    font-family: 'HELVETNC', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -14,6 +19,52 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.page-title {
+    text-align: left;
+    font-size: 2.5em;
+    margin: 60px 0;
+    color: var(--text-primary);
+    padding-left: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    width: 100%;
+    background: rgba(25, 25, 25, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
 }
 
 header {
@@ -57,6 +108,7 @@ nav ul li a:hover {
 }
 
 main {
+    flex: 1;
     width: 100%;
     padding: 0 4rem;
     margin: 0;
@@ -284,14 +336,6 @@ main {
     opacity: 0.7;
 }
 
-footer {
-    background: rgba(25, 25, 25, 0.95);
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
 #featured, #categories {
     padding: 5rem 0 3rem 0;
     width: 100%;
@@ -380,22 +424,9 @@ div > a:hover {
     color: #ffffff;
 }
 
-
 h2 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     margin: 0 0 1.0rem 0;
-}
-
-/* 모든 페이지에 공통으로 적용될 타이틀 스타일 */
-.page-title {
-    text-align: left;
-    font-size: 2.5em;
-    margin: 60px 0;
-    color: var(--text-primary);
-    padding-left: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .breadcrumb nav a:last-child {
@@ -688,4 +719,104 @@ h2 {
                 url('../images/project3-bg.png');
     background-size: cover;
     background-position: center;
+}
+
+/* 컨텐츠 섹션 공통 스타일 */
+.content-section {
+    margin-bottom: 3rem;
+    padding: 30px;
+    background: rgba(25, 25, 25, 0.75);
+    border-radius: 10px;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.85) 0%,
+        rgba(0, 12, 24, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.content-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 공통 그리드 레이아웃 */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* 공통 카드 스타일 */
+.card-base {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.card-base:hover {
+    transform: translateY(-5px);
+}
+
+/* 공통 이미지 컨테이너 */
+.image-container {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 공통 반응형 스타일 */
+@media (max-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        margin: 40px 0;
+        padding-left: 10px;
+    }
+
+    .section-container {
+        padding: 0 10px 40px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .grid-layout,
+    .art-container,
+    .games-grid,
+    .project-grid,
+    .category-grid {
+        gap: 20px;
+    }
 }
