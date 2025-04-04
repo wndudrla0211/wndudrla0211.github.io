@@ -1,3 +1,18 @@
+body {
+    font-family: 'HELVETNC', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 0 4rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .page-title {
     text-align: left;
     font-size: 2.5em;
@@ -38,7 +53,7 @@
     margin-top: 0;
     display: grid;
     grid-template-columns: 65% 35%;
-    gap: 20px;
+    gap: 40px;
     background: rgba(25, 25, 25, 0.95);
     border-radius: 20px;
     padding: 40px;
@@ -53,7 +68,7 @@
 .main-media {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 비율 */
+    padding-top: 56.25%;
     background: #000;
 }
 
@@ -140,6 +155,13 @@
     background: linear-gradient(to right, #00cccc, #009999);
 }
 
+.play-button.disabled {
+    background: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
 .info-box, .team-box {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -182,8 +204,34 @@
     line-height: 1.6;
 }
 
+.design-overview {
+    margin-top: 30px;
+}
+
+.design-overview iframe {
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
 @media (max-width: 768px) {
     .game-content {
         grid-template-columns: 1fr;
     }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgba(25, 25, 25, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
 }

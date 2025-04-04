@@ -12,8 +12,10 @@
         <nav>
             <ul>
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
-                <li><a href="html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
+                <li><a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.youtube.com/@alexkim5126" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://github.com/wndudrla0211" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://discord.com/users/bangman6032" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
                 <li><a href="resume/Resume 2024.12.10 (animatio+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
             </ul>
         </nav>
@@ -27,13 +29,6 @@
                     <p class="blue-text">Game Designer, Game Developer, Animator, 2D/3D Artist</p>
                 </div>
             </div>
-            <ul class="social-icons">
-                <li><a href="#" id="email-icon" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://www.youtube.com/@alexkim5126" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://github.com/wndudrla0211" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-                <li><a href="#" id="discord-icon" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/ju-young-alex-kim-644190301/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
             <div class="skills">
                 <span>C/C++</span>
                 <span>Python</span>
@@ -52,39 +47,40 @@
         </section>
 
         <section id="featured">
-            <h1>Featured</h1>
-            <div class="featured-grid">
-                <a href="html/project1.html" class="featured-card">
-                    <h2>Project 1</h2>
-                    <p>NEW SCENE GAME JAM 2024</p>
+            <h2>Featured</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1</p>
                     <div class="tags">
-                        <span class="tag">Fighting</span>
-                        <span class="tag">Action</span>
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
                     </div>
-                </a>
-                
-                <a href="html/project2.html" class="featured-card">
-                    <h2>Project 2</h2>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
                     <p>Description of Project 2</p>
                     <div class="tags">
-                        <span class="tag">Tag 1</span>
-                        <span class="tag">Tag 2</span>
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
                     </div>
-                </a>
-                
-                <a href="html/project3.html" class="featured-card">
-                    <h2>Project 3</h2>
+                </div>
+                <div class="project">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
                     <p>Description of Project 3</p>
                     <div class="tags">
-                        <span class="tag">Tag 1</span>
-                        <span class="tag">Tag 2</span>
+                        <span>Tag 1</span>
+                        <span>Tag 2</span>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
 
         <section id="categories">
-            <h1>Browse by Category</h1>
+            <h2>Browse by Category</h2>
             <div class="category-grid">
                 <a href="html/games.html" class="category">
                     <span>Games</span>
@@ -92,48 +88,32 @@
                 <a href="html/gamejams.html" class="category">
                     <span>Game Jams</span>
                 </a>
-                <a href="html/gamedesign.html" class="category">
-                    <span>Game Design</span>
-                </a>
-                <a href="html/balancepatches.html" class="category">
-                    <span>Thoughts On Balance Patches For Games Out There</span>
-                </a>
                 <a href="html/animations.html" class="category">
                     <span>Animations</span>
                 </a>
                 <a href="html/2darts.html" class="category">
-                    <span>2D Art</span>
+                    <span>2D Arts</span>
                 </a>
-                <a href="html/3dart.html" class="category">
-                    <span>3D Art</span>
+                <a href="html/3d-arts.html" class="category">
+                    <span>3D Arts</span>
                 </a>
-                <a href="html/fxarts.html" class="category">
+                <a href="html/fx-arts.html" class="category">
                     <span>FX Arts</span>
+                </a>
+                <a href="html/about.html" class="category">
+                    <span>About Me</span>
+                </a>
+                <a href="html/blog.html" class="category">
+                    <span>Weight Lifting Blog</span>
                 </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ju-Young Kim (Alex). All rights reserved.</p>
+        <p>&copy; 2024 Ju-Young Kim (Alex). All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
-
-    <!-- 팝업 요소 추가 -->
-    <div id="email-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <p><i class="fas fa-envelope"></i> alex99.young.kim@gmail.com</p>
-        </div>
-    </div>
-
-    <!-- 디스코드 팝업 추가 -->
-    <div id="discord-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <p><i class="fab fa-discord"></i> bangman6032</p>
-        </div>
-    </div>
 </body>
 </html>

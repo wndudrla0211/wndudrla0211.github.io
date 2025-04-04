@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Stories - Ju-Young Kim (Alex)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html#overview">Overview</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Workout</a></li>
+                <li><a href="../resume/Resume 2024.12.10 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <nav>
+            <a href="../index.html">Home</a>
+            <span class="separator">></span>
+            <span>Ghost Stories</span>
+        </nav>
+    </div>
+
+    <main>
+        <h1 class="page-title">Ghost Stories</h1>
+        <section class="game-detail">
+            <div class="game-content">
+                <div class="game-media">
+                    <div class="main-media">
+                        <img id="mainImage" src="../images/game screenshots/screen1.png" alt="Inchainity gameplay">
+                    </div>
+                    <div class="media-strip">
+                        <div class="thumbnail active" onclick="changeImage('../images/game screenshots/screen1.png', this)">
+                            <img src="../images/game screenshots/screen1.png" alt="Main Screenshot">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../images/game screenshots/screen2.png', this)">
+                            <img src="../images/game screenshots/screen2.png" alt="Screenshot 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../images/game screenshots/screen3.png', this)">
+                            <img src="../images/game screenshots/screen3.png" alt="Screenshot 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../images/game screenshots/screen4.png', this)">
+                            <img src="../images/game screenshots/screen4.png" alt="Screenshot 3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-info-sidebar">
+                    <div class="game-actions">
+                        <span class="play-button disabled">In Progress ✕</span>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Game Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">In Progress</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Platform:</span>
+                            <span class="value">Unity</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Genre:</span>
+                            <span class="value">Fighting, Action</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Made with:</span>
+                            <span class="value">Unity</span>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <h3>Development Team</h3>
+                        <div class="team-member">
+                            <span class="role">Design:</span>
+                            <span class="name">PURDUE SIGGD</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Programming:</span>
+                            <span class="name">PURDUE SIGGD</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Audio:</span>
+                            <span class="name">PURDUE SIGGD</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Art:</span>
+                            <span class="name">PURDUE SIGGD (Ju-Young Kim (Alex))</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-description">
+                    <h2>About This Game</h2>
+                    <p>A combat game featuring stories of various ghosts. Control the ghosts through possession and engage in battles. Each ghost has their own unique story to tell. Play through their narratives and discover what lies within!</p>
+                    
+                    <div class="design-overview">
+                        <h2>Design Overview</h2>
+                        <iframe src="../pdfs/Overall Design Overview 11-20-24.pptx.pdf" width="100%" height="600px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function changeImage(src, thumbnail) {
+        document.getElementById('mainImage').src = src;
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        thumbnail.classList.add('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const currentIndex = Array.from(thumbnails).findIndex(thumb => thumb.classList.contains('active'));
+        
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            thumbnails[currentIndex - 1].click();
+        } else if (e.key === 'ArrowRight' && currentIndex < thumbnails.length - 1) {
+            thumbnails[currentIndex + 1].click();
+        }
+    });
+    </script>
+</body>
+</html> 

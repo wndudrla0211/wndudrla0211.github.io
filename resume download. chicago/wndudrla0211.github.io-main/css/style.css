@@ -1,0 +1,822 @@
+/* Font Awesome CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Font Face */
+@font-face {
+    font-family: 'HELVETNC';
+    src: url('../fonts/HELVETNC.TTF') format('truetype');
+}
+
+/* Global Styles */
+body {
+    font-family: 'HELVETNC', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-color: #0a0a0a;
+    background-image: url('../images/background/white.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.page-title {
+    text-align: left;
+    font-size: 2.5em;
+    margin: 60px 0;
+    color: var(--text-primary);
+    padding-left: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    width: 100%;
+    background: rgba(25, 25, 25, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+header {
+    background: rgba(25, 25, 25, 0.95);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+.resume-link {
+    background-color: #00ffff;
+    color: #0a0a0a;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #00cccc;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 0 4rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+}
+
+.profile-info {
+    flex: 0 0 auto;
+}
+
+.profile-info h1 {
+    font-size: 3.0rem;
+    margin: 0;
+    margin-bottom: 0.1rem;
+}
+
+.blue-text {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: flex-end;
+    width: auto;
+    margin-top: 3.5rem;
+    margin-left: 6rem;
+    max-width: 600px;
+}
+
+.skills span {
+    background: #e0e0e0;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.project {
+    position: relative;
+    background: rgba(25, 25, 25, 0.75);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.45) 0%,
+        rgba(0, 12, 24, 0.35) 100%
+    );
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project:hover::before {
+    opacity: 0.5;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.project p {
+    font-size: 1.0rem;
+    color: #cccccc;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.category {
+    position: relative;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Games 카테고리 */
+.category[href="html/games.html"] {
+    background-image: url('../images/game screenshots/screen1.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Game Jams 카테고리 */
+.category[href="html/gamejams.html"] {
+    background-image: url('../images/game screenshots/inchainity 1.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.category[href="html/about.html"] {
+    background-image: url('../images/models/aboutme.jpg');
+}
+
+.category[href="html/2darts.html"] {
+    background-image: url('../images/models/cgt 118 final project ju-young kim(alex).jpg');
+}
+
+.category[href="html/blog.html"] {
+    background-image: url('../images/models/gym.jpg');
+}
+
+.category[href="html/balancepatches.html"] {
+    background-image: url('../images/models/patch.png');
+}
+
+.category[href="html/gamedesign.html"] {
+    background-image: url('../images/models/gamedesign.png');
+}
+
+/* 3D Art 카테고리 */
+.category[href="html/3dart.html"] {
+    background-image: url('../images/models/3d1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* FX Arts 카테고리 */
+.category[href="html/fxarts.html"] {
+    background-image: url('../images/models/fx2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.category span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 2;
+    text-decoration: underline;
+}
+
+.category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.75) 0%,
+        rgba(0, 12, 24, 0.65) 100%
+    );
+    transition: opacity 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.category:hover::before {
+    opacity: 0.7;
+}
+
+#featured, #categories {
+    padding: 5rem 0 3rem 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .blue-text {
+        font-size: 1rem;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover::before {
+    opacity: 0.7;
+}
+
+/* 브레드크럼 스타일 */
+div > a {
+    color: #969696;  /* 회색 링크 색상 */
+    font-size: 12px; /* 작은 글씨 크기 */
+    text-decoration: none;
+}
+
+div > a:hover {
+    color: #00ffff;  /* hover 시 밝은 청록색 */
+}
+
+/* 브레드크럼 스타일 수정 */
+.breadcrumb {
+    background: rgba(25, 25, 25, 0.95);
+    padding: 10px 4rem;
+    margin-bottom: 20px;
+}
+
+.breadcrumb nav {
+    max-width: none;
+    margin: 0;
+    color: #969696;
+}
+
+.breadcrumb a {
+    color: #969696;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.breadcrumb a:hover {
+    color: #00ffff;
+}
+
+.breadcrumb .separator {
+    margin: 0 8px;
+    color: #969696;
+}
+
+/* 현재 페이지 제목을 흰색으로 */
+.breadcrumb span:last-of-type {
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1.0rem 0;
+}
+
+.breadcrumb nav a:last-child {
+    color: #fff;  /* 현재 페이지 링크를 하얀색으로 */
+    /* pointer-events: none; 제거 */
+}
+
+.breadcrumb .separator {
+    color: #fff;  /* 구분자(>) 색상 유지 */
+    margin: 0 10px;
+}
+
+.breadcrumb nav a {
+    color: #8f98a0;  /* 다른 링크들은 기존 색상 유지 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb nav a:hover {
+    color: #fff;  /* 모든 링크에 호버 효과 적용 */
+}
+
+@media (max-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-icons {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons li a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #007bff;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+.nav-icon i {
+    font-size: 16px;
+}
+
+.nav-icon:hover {
+    color: #00ffff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 80px;  /* 상단에서 약간 떨어진 위치 */
+    right: 20px;  /* 오른쪽에서 약간 떨어진 위치 */
+    transform: none;  /* 중앙 정렬 제거 */
+    background-color: rgba(25, 25, 25, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease;
+}
+
+.popup-content {
+    color: white;
+    text-align: left;  /* 왼쪽 정렬 */
+    position: relative;
+    min-width: 250px;  /* 최소 너비 설정 */
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(25, 25, 25, 0.95);
+}
+
+.close-popup {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: white;
+}
+
+.popup p {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup p i {
+    font-size: 16px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.featured {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: none;
+    background-image: url('../images/game screenshots/screen1.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.featured::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.featured-content {
+    position: relative;
+    z-index: 2;
+}
+
+.featured .project-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.featured h2 {
+    font-size: 2em;
+    margin: 5px 0;
+    color: white;
+}
+
+.featured .subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.featured .tags {
+    margin-top: 10px;
+}
+
+.featured .tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.featured[href="html/project1.html"] {
+    background-image: url('../images/game screenshots/screen1.png');
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.featured-card {
+    position: relative;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    text-decoration: none;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+    transition: transform 0.3s ease;
+}
+
+.featured-card[href="html/project1.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/game screenshots/screen1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-card:visited {
+    color: white;
+}
+
+.featured-card:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+.featured-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.featured-card p {
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.featured-card .tags {
+    margin-top: 10px;
+}
+
+.featured-card .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.project-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-card[href="html/project2.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/project2-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-card[href="html/project3.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/project3-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 컨텐츠 섹션 공통 스타일 */
+.content-section {
+    margin-bottom: 3rem;
+    padding: 30px;
+    background: rgba(25, 25, 25, 0.75);
+    border-radius: 10px;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(25, 25, 25, 0.85) 0%,
+        rgba(0, 12, 24, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.content-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 공통 그리드 레이아웃 */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* 공통 카드 스타일 */
+.card-base {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.card-base:hover {
+    transform: translateY(-5px);
+}
+
+/* 공통 이미지 컨테이너 */
+.image-container {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 공통 반응형 스타일 */
+@media (max-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        margin: 40px 0;
+        padding-left: 10px;
+    }
+
+    .section-container {
+        padding: 0 10px 40px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .grid-layout,
+    .art-container,
+    .games-grid,
+    .project-grid,
+    .category-grid {
+        gap: 20px;
+    }
+}
