@@ -282,11 +282,11 @@ main {
     background-image: url('../images/models/gym.jpg');
 }
 
-.category[href="html/balancepatches.html"] {
+.category[href="html/cgt172 exercises.html"] {
     background-image: url('../images/models/patch.png');
 }
 
-.category[href="html/gamedesign.html"] {
+.category[href="html/cgt255.html"] {
     background-image: url('../images/models/gamedesign.png');
 }
 
@@ -635,9 +635,6 @@ h2 {
     font-size: 0.9em;
 }
 
-.featured[href="html/project1.html"] {
-    background-image: url('../images/game screenshots/screen1.png');
-}
 
 .featured-grid {
     display: grid;
@@ -664,6 +661,14 @@ h2 {
 .featured-card[href="html/project1.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
                 url('../images/game screenshots/screen1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.featured-card[href="html/project2.html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -705,13 +710,6 @@ h2 {
     width: 24px;
     height: 24px;
     margin-bottom: 10px;
-}
-
-.featured-card[href="html/project2.html"] {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../images/project2-bg.png');
-    background-size: cover;
-    background-position: center;
 }
 
 .featured-card[href="html/project3.html"] {
