@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGT 17208 Exercises</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
+                <li><a href="resume/Resume 2024.12.10 (animatio+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <nav>
+            <a href="../index.html">Home</a>
+            <span class="separator">></span>
+            <a href="../index.html#categories">Categories</a>
+            <span class="separator">></span>
+            <a href="cgt172 exercises.html">CGT 17208 Exercises and Projects</a>
+        </nav>
+    </div>
+
+    <main>
+        <h1 class="page-title">CGT 17208 Exercises and Projects</h1>
+        <section class="game-detail">
+            <div class="game-content">
+                <div class="game-media">
+                    <div class="main-media">
+                        <img id="mainImage" src="../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg" alt="Inchainity gameplay">
+                    </div>
+                    <div class="media-strip">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg" alt="Main Screenshot">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 exercise1 thumb2.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 172 exercise1 thumb2.jpg" alt="Exercises">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project1 thumb.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 172 project1 thumb.jpg" alt="Exercises">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project2 thumb.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 172 project2 thumb.jpg" alt="Exercises">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project3 thumb.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 172 project3 thumb.jpg" alt="Exercises">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-info-sidebar">
+                    <div class="game-actions">
+                        <span class="play-button disabled">In Progress ✕</span>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Game Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">In Progress</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Platform:</span>
+                            <span class="value">Purdue University</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Genre:</span>
+                            <span class="value">UX Design</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Made with:</span>
+                            <span class="value">Google Drive</span>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <h3>Development Team</h3>
+                        <div class="team-member">
+                            <span class="role">Design:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Programming:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Audio:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Art:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-description">
+                    <h2>About This Course</h2>
+                    <p>Through CGT 172, I learned the fundamental principles of UX design and user-centered design processes. Through weekly assignments, I practiced and understood various UX methodologies including user research, wireframing, prototyping, and usability testing. I completed projects that implement essential UX design principles and created user-friendly interfaces as required by the course. Through this process, I was able to understand the importance of user experience and learn the fundamental aspects of effective interface design. Exercises and Projects include User Research Methods, Wireframing Techniques, Interactive Prototyping, Usability Testing, Information Architecture, Visual Design Principles, User Interface Design Patterns.
+                    </p>
+                    
+                    <div class="design-overview">
+                        <h2>Exercises Overview</h2>
+                        <div class="exercise-links">
+                            <ul>
+                                <li><a href="../largefile/pdfs/cgt 172 ex1 team 3.pdf" target="_blank">Exercise 1: Overview of UX Trends in Game Development and VR/AR</a></li>
+                                <li><a href="../largefile/pdfs/cgt 172 project 1.pdf" target="_blank">Project 1: What can a Starship do?</a></li>
+                                <li><a href="../largefile/pdfs/cgt 172 project 2.pdf" target="_blank">Project 2: Embodied Shopping Interactions Design Documentation</a></li>
+                                <li><a href="../largefile/pdfs/cgt 172 project 3.pdf" target="_blank">Project 3: Fake Out w/ AI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function changeImage(src, thumbnail) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = src;
+        updateThumbnailActive(thumbnail);
+    }
+
+    function updateThumbnailActive(thumbnail) {
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        thumbnail.classList.add('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const currentIndex = Array.from(thumbnails).findIndex(thumb => thumb.classList.contains('active'));
+        
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            thumbnails[currentIndex - 1].click();
+        } else if (e.key === 'ArrowRight' && currentIndex < thumbnails.length - 1) {
+            thumbnails[currentIndex + 1].click();
+        }
+    });
+    </script>
+
+    <style>
+    .exercise-links {
+        margin-top: 20px;
+    }
+
+    .exercise-links h3 {
+        color: #333;
+        margin: 20px 0 10px 0;
+        font-size: 1.2em;
+    }
+
+    .exercise-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .exercise-links li {
+        margin: 10px 0;
+    }
+
+    .exercise-links a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: all 0.3s;
+        border: 1px solid #ffffff;
+        display: inline-block;
+    }
+
+    .exercise-links a:hover {
+        background-color: #f0f0f0;
+        color: #0066cc;
+        text-decoration: underline;
+        border-color: #0066cc;
+    }
+    </style>
+</body>
+</html>

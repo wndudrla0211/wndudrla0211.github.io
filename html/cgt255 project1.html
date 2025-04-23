@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Ju-Young Kim (Alex)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
+                <li><a href="resume/Resume 2024.12.10 (animatio+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <nav>
+            <a href="../../index.html">Home</a>
+            <span class="separator">></span>
+            <a href="../../index.html#categories">Categories</a>
+            <span class="separator">></span>
+            <a href="../html/cgt255.html">CGT 255 Exercises and Projects</a>
+            <span class="separator">></span>
+            <a href="cgt255 project1.html">Soul Taker</a>
+        </nav>
+    </div>
+
+    <main>
+        <h1 class="page-title">Soul Taker</h1>
+        <section class="game-detail">
+            <div class="game-content">
+                <div class="game-media">
+                    <div class="main-media">
+                        <img id="mainImage" src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg" alt="cgt 255 alpha gameplay">
+                    </div>
+                    <div class="media-strip">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg" alt="Main Screenshot">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg" alt="Screenshot 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg" alt="Screenshot 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg" alt="Screenshot 3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-info-sidebar">
+                    <div class="game-actions">
+                        <span class="play-button disabled">In Progress ✕</span>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Game Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">In Progress</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Platform:</span>
+                            <span class="value">Purdue University</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Genre:</span>
+                            <span class="value">Hyper-FPS</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Made with:</span>
+                            <span class="value">Unreal Engine 5</span>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <h3>Development Team</h3>
+                        <div class="team-member">
+                            <span class="role">Design:</span>
+                            <span class="name">Ju-Young Kim (Alex), Jack DuBord</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Programming:</span>
+                            <span class="name">Ju-Young Kim (Alex), Connor Schaaf, Henry Dix</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Audio:</span>
+                            <span class="name">Nate Teague</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Art:</span>
+                            <span class="name">Ju-Young Kim (Alex), Vivian Shiang</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-description">
+                    <h2>About This Game</h2>
+                    <p>Fast-paced free-for-all deathmatch FPS where players compete individually in intense arena combat. Each match is a high-energy battle where players choose unique heroes and fight to achieve the highest elimination score. The game rewards quick reflexes, tactical positioning, and effective use of hero abilities in chaotic multiplayer combat scenarios.
+                    </p>
+                    <div class="game-description">
+                        <h2>Contributions</h2>
+                        <p>
+                        </p>
+                    <div class="design-overview">
+                        <h2>Design Overview</h2>
+                        <iframe src="../largefile/pdfs/255 Project GDD.docx (1).pdf" width="100%" height="600px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function changeImage(src, thumbnail) {
+        document.getElementById('mainImage').src = src;
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        thumbnail.classList.add('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const currentIndex = Array.from(thumbnails).findIndex(thumb => thumb.classList.contains('active'));
+        
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            thumbnails[currentIndex - 1].click();
+        } else if (e.key === 'ArrowRight' && currentIndex < thumbnails.length - 1) {
+            thumbnails[currentIndex + 1].click();
+        }
+    });
+    </script>
+</body>
+</html> 
