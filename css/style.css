@@ -15,7 +15,7 @@ body {
     padding: 0;
     color: #000000;
     background-color: #0a0a0a;
-    background-image: url('../images/background/white.png');
+    background-image: url('../largefile/images/background/white.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -258,48 +258,48 @@ main {
 
 /* Games 카테고리 */
 .category[href="html/games.html"] {
-    background-image: url('../images/game screenshots/screen1.png');
+    background-image: url('../largefile/images/game screenshots/screen1.png');
     background-size: cover;
     background-position: center center;
 }
 
 /* Game Jams 카테고리 */
 .category[href="html/gamejams.html"] {
-    background-image: url('../images/game screenshots/inchainity 1.jpg');
+    background-image: url('../largefile/images/game screenshots/inchainity 1.jpg');
     background-size: cover;
     background-position: center center;
 }
 
 .category[href="html/about.html"] {
-    background-image: url('../images/models/aboutme.jpg');
+    background-image: url('../largefile/images/models/aboutme.jpg');
 }
 
 .category[href="html/2darts.html"] {
-    background-image: url('../images/models/cgt 118 final project ju-young kim(alex).jpg');
+    background-image: url('../largefile/images/models/cgt 118 final project ju-young kim(alex).jpg');
 }
 
 .category[href="html/blog.html"] {
-    background-image: url('../images/models/gym.jpg');
+    background-image: url('../largefile/images/models/gym.jpg');
 }
 
 .category[href="html/cgt172 exercises.html"] {
-    background-image: url('../images/models/patch.png');
+    background-image: url('../largefile/images/models/patch.png');
 }
 
 .category[href="html/cgt255.html"] {
-    background-image: url('../images/models/gamedesign.png');
+    background-image: url('../largefile/images/models/gamedesign.png');
 }
 
 /* 3D Art 카테고리 */
 .category[href="html/3dart.html"] {
-    background-image: url('../images/models/3d1.png');
+    background-image: url('../largefile/images/models/3d1.png');
     background-size: cover;
     background-position: center;
 }
 
 /* FX Arts 카테고리 */
 .category[href="html/fxarts.html"] {
-    background-image: url('../images/models/fx2.png');
+    background-image: url('../largefile/images/models/fx2.png');
     background-size: cover;
     background-position: center;
 }
@@ -585,7 +585,7 @@ h2 {
     border-radius: 15px;
     overflow: hidden;
     background: none;
-    background-image: url('../images/game screenshots/screen1.png') !important;
+    background-image: url('../largefile/images/game screenshots/screen1.png') !important;
     background-size: cover !important;
     background-position: center !important;
     text-decoration: none;
@@ -660,7 +660,7 @@ h2 {
 
 .featured-card[href="html/project1.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../images/game screenshots/screen1.png');
+                url('../largefile/images/game screenshots/screen1.png');
     background-size: cover;
     background-position: center;
 }
@@ -668,7 +668,7 @@ h2 {
 
 .featured-card[href="html/project2.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg');
+                url('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -714,7 +714,7 @@ h2 {
 
 .featured-card[href="html/project3.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../images/project3-bg.png');
+                url('../largefile/images/project3-bg.png');
     background-size: cover;
     background-position: center;
 }
