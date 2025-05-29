@@ -357,30 +357,6 @@ main {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-
-    .blue-text {
-        font-size: 1rem;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 .category a {
     text-decoration: none;
@@ -465,29 +441,6 @@ h2 {
     color: #fff;  /* 모든 링크에 호버 효과 적용 */
 }
 
-@media (max-width: 1200px) {
-    .category-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 992px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 .social-icons {
     position: absolute;
@@ -852,19 +805,6 @@ h2 {
     display: block;
 }
 
-/* 공통 반응형 스타일 */
-@media (max-width: 1024px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .page-title {
-        margin: 40px 0;
-        padding-left: 10px;
-    }
-
     .section-container {
         padding: 0 10px 40px;
     }
@@ -880,4 +820,3 @@ h2 {
     .category-grid {
         gap: 20px;
     }
-}
