@@ -1,0 +1,24 @@
+.icon-with-x {
+    position: relative;
+}
+
+.icon-with-x::after {
+    content: '×';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.featured-card.icon-with-x::after {
+    content: '×';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+    z-index: 3;
+} 
