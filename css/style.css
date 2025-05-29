@@ -95,6 +95,20 @@ nav ul li a:hover {
     color: #00ffff;
 }
 
+.icon-with-x {
+    position: relative;
+}
+
+.icon-with-x::after {
+    content: '×';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 .resume-link {
     background-color: #00ffff;
     color: #0a0a0a;
@@ -282,14 +296,16 @@ main {
     background-image: url('../largefile/images/models/gym.jpg');
 }
 
-.category[href="html/cgt172 exercises.html"] {
-    background-image: url('../largefile/images/models/patch.png');
-}
-
-.category[href="html/cgt255.html"] {
+.category[href="html/gameideas.html"] {
     background-image: url('../largefile/images/models/gamedesign.png');
 }
 
+.category[href="html/purdue_projects.html"] {
+    background-image: url('../largefile/images/background/Purdue-University-Logo.jpg');
+}
+.category[href="html/cgt255.html"] {
+    background-image: url('../largefile/images/models/gamedesign.png');
+}
 /* 3D Art 카테고리 */
 .category[href="html/3dart.html"] {
     background-image: url('../largefile/images/models/3d1.png');
@@ -522,7 +538,48 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     animation: slideIn 0.3s ease;
 }
+/* Animations 카테고리 */
+.category[href="html/animations.html"] {
+    background-image: url('../largefile/images/models/animation.png');
+    background-size: cover;
+    background-position: center;
+}
 
+.category[href="html/animations.html"]::after {
+    content: '×';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+    z-index: 3;
+}
+
+.icon-with-x {
+    position: relative;
+}
+
+.icon-with-x::after {
+    content: '×';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.featured-card.icon-with-x::after {
+    content: '×';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+    z-index: 3;
+} 
 .popup-content {
     color: white;
     text-align: left;  /* 왼쪽 정렬 */
