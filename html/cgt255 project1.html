@@ -42,6 +42,12 @@
                             <source id="videoSource" src="" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
+                        <div class="media-fallback">
+                            If the video doesn't play, please check it on 
+                            <a href="https://youtu.be/Ql_vO0hnd_k" target="_blank">YouTube1</a> and 
+                            <a href="https://youtu.be/zUFCsVKWde4" target="_blank">YouTube2</a>.
+                        </div>
+                        
                     </div>
                     <div class="media-strip">
                         <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/project2 mainmenu.png', this)">
@@ -127,6 +133,7 @@
                         </p>
                         <p>
                             이 프로젝트에서는 게임 디자인과 메카닉스 기획서 작성, 사용자 경험 디자인, 2D/3D 아트 제작, 그리고 블루프린트 프로그래밍을 담당했습니다
+
                         </p>
                     <div class="design-overview">
                         <h2>Design Overview</h2>
@@ -214,6 +221,26 @@
     
     .thumbnail.video-thumb:hover .play-overlay {
         background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .media-fallback {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .media-fallback a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .media-fallback a:hover {
+        text-decoration: underline;
     }
     </style>
     
