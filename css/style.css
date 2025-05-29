@@ -596,7 +596,13 @@ h2 {
     border-right: 10px solid transparent;
     border-bottom: 10px solid rgba(25, 25, 25, 0.95);
 }
-
+.quote-text {
+    font-style: italic;
+    margin-top: 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9em;
+}
 .close-popup {
     position: absolute;
     top: -5px;
