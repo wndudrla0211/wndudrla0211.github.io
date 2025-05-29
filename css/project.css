@@ -151,6 +151,19 @@ main {
     font-size: 18px;
 }
 
+.play-button {
+    display: block;
+    background: linear-gradient(to right, #00ffff, #00cccc);
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
 .play-button:hover {
     background: linear-gradient(to right, #00cccc, #009999);
 }
@@ -215,69 +228,8 @@ main {
 }
 
 @media (max-width: 768px) {
-    main {
-        padding: 0 1rem;
-    }
-
     .game-content {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .game-media {
-        width: 100%;
-    }
-
-    .media-strip {
-        gap: 5px;
-    }
-
-    .thumbnail {
-        width: 80px;
-        height: 45px;
-    }
-
-    .game-info-sidebar {
-        width: 100%;
-    }
-
-    .page-title {
-        font-size: 2em;
-        margin: 30px 0;
-        padding-left: 10px;
-    }
-
-    .game-detail {
-        padding: 10px;
-    }
-
-    .game-description {
-        padding: 15px;
-    }
-
-    .game-description h2 {
-        font-size: 1.8em;
-    }
-
-    .design-overview iframe {
-        height: 400px;
-    }
-}
-
-@media (max-width: 480px) {
-    .thumbnail {
-        width: 60px;
-        height: 34px;
-    }
-
-    .game-content {
-        padding: 15px;
-    }
-
-    .play-button {
-        font-size: 16px;
-        padding: 12px;
     }
 }
 

@@ -357,6 +357,30 @@ main {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .blue-text {
+        font-size: 1rem;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .category a {
     text-decoration: none;
@@ -441,6 +465,29 @@ h2 {
     color: #fff;  /* 모든 링크에 호버 효과 적용 */
 }
 
+@media (max-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .social-icons {
     position: absolute;
@@ -450,8 +497,31 @@ h2 {
     padding: 0;
     margin: 20px 0;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    width: 300px; /* 가로 영역 확보 */
 }
+
+/* Instagram까지의 아이콘들 (상단 가로줄) */
+.social-icons li:nth-child(-n+6) {
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 20px;
+}
+
+/* Instagram 이후 아이콘들 (세로줄) */
+.social-icons li:nth-child(n+7) {
+    position: absolute;
+    right: 18px;
+    width: auto;
+}
+
+/* 세로로 배치되는 아이콘들의 위치 조정 */
+.social-icons li:nth-child(7) { top: 40px; }
+.social-icons li:nth-child(8) { top: 80px; }
+.social-icons li:nth-child(9) { top: 120px; }
+.social-icons li:nth-child(10) { top: 160px; }
+.social-icons li:nth-child(11) { top: 200px; }
+.social-icons li:nth-child(12) { top: 240px; }
+.social-icons li:nth-child(13) { top: 280px; }
 
 .social-icons li a {
     color: #333;
@@ -805,99 +875,3 @@ h2 {
     display: block;
 }
 
-    .section-container {
-        padding: 0 10px 40px;
-    }
-
-    .content-section {
-        padding: 20px;
-    }
-
-    .grid-layout,
-    .art-container,
-    .games-grid,
-    .project-grid,
-    .category-grid {
-        gap: 20px;
-    }
-
-/* 모바일 반응형 스타일 */
-@media screen and (max-width: 768px) {
-    main {
-        padding: 0 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    #overview {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-
-    .blue-text {
-        font-size: 1rem;
-    }
-
-    .skills {
-        margin: 2rem 0;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .social-icons {
-        position: relative;
-        justify-content: center;
-        right: 0;
-        margin: 2rem 0;
-    }
-
-    .featured-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .breadcrumb {
-        padding: 10px 1rem;
-    }
-
-    .popup {
-        width: 90%;
-        right: 5%;
-        left: 5%;
-    }
-}
-
-/* 더 작은 모바일 화면을 위한 추가 스타일 */
-@media screen and (max-width: 480px) {
-    .profile-info h1 {
-        font-size: 1.5rem;
-    }
-
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-icons {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .social-icons li a {
-        font-size: 20px;
-    }
-}
