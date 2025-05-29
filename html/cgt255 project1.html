@@ -12,22 +12,22 @@
         <nav>
             <ul>
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
-                <li><a href="html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
-                <li><a href="resume/Resume 2025.02.17 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+                <li><a href="../html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="../html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
+                <li><a href="../resume/Resume 2025.02.17 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="breadcrumb">
         <nav>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
             <span class="separator">></span>
-            <a href="../../index.html#categories">Categories</a>
+            <a href="../index.html#categories">Categories</a>
             <span class="separator">></span>
-            <a href="../html/cgt255.html">CGT 255 Exercises and Projects</a>
+            <a href="../html/purdue_projects.html">Purdue Projects</a>
             <span class="separator">></span>
-            <a href="cgt255 project1.html">Soul Taker</a>
+            <a href="cgt255.html">CGT 255 Project 1</a>
         </nav>
     </div>
 
@@ -37,34 +37,46 @@
             <div class="game-content">
                 <div class="game-media">
                     <div class="main-media">
-                        <img id="mainImage" src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg" alt="cgt 255 alpha gameplay">
+                        <img id="mainImage" src="../largefile/images/game screenshots/project2 mainmenu.png" alt="project2 mainmenu">
+                        <video id="mainVideo" style="display: none;" controls preload="none" playsinline>
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <div class="media-strip">
-                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg" alt="Main Screenshot">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/project2 mainmenu.png', this)">
+                            <img src="../largefile/images/game screenshots/project2 mainmenu.png" alt="Main Screenshot">
+                        </div>
+                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/CGT 255 Alpha Deliverable (1).mp4', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg" alt="Video Preview">
+                            <div class="play-overlay">▶</div>
+                        </div>
+                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/soul taker gameplay.mp4', this)">
+                            <img src="../largefile/images/game screenshots/soultaker screenshot.jpg" alt="Video Preview">
+                            <div class="play-overlay">▶</div>
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot1.jpg" alt="Screenshot 1">
                         </div>
                         <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg" alt="Screenshot 1">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot2.jpg" alt="Screenshot 2">
                         </div>
                         <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg" alt="Screenshot 2">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg" alt="Screenshot 3">
+                            <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg" alt="Screenshot 3">
                         </div>
                     </div>
                 </div>
 
                 <div class="game-info-sidebar">
                     <div class="game-actions">
-                        <span class="play-button disabled">In Progress ✕</span>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="play-button">Play Game</a>
                     </div>
 
                     <div class="info-box">
                         <h3>Game Details</h3>
                         <div class="detail-item">
                             <span class="label">Status:</span>
-                            <span class="value">In Progress</span>
+                            <span class="value">Completed</span>
                         </div>
                         <div class="detail-item">
                             <span class="label">Platform:</span>
@@ -105,9 +117,16 @@
                     <h2>About This Game</h2>
                     <p>Fast-paced free-for-all deathmatch FPS where players compete individually in intense arena combat. Each match is a high-energy battle where players choose unique heroes and fight to achieve the highest elimination score. The game rewards quick reflexes, tactical positioning, and effective use of hero abilities in chaotic multiplayer combat scenarios.
                     </p>
+                    <p>
+                        플레이어들이 개인전으로 경쟁하는 빠른 템포의 데스매치 FPS 게임입니다. 각 매치는 플레이어들이 고유한 영웅을 선택하고 최고의 처치 점수를 달성하기 위해 싸우는 고강도 전투로 이루어집니다. 이 게임은 혼란스러운 멀티플레이어 전투 상황에서 빠른 반사 신경, 전술적 위치 선정, 그리고 영웅 능력의 효과적인 사용을 보상합니다.
+
+                    </p>
                     <div class="game-description">
                         <h2>Contributions</h2>
-                        <p> Game Design, Mechanics Documentations, UX Design, 2D/3D Art, Blueprints
+                        <p>Game Design, Mechanics Documentations, UX Design, 2D/3D Art,  Blueprints
+                        </p>
+                        <p>
+                            이 프로젝트에서는 게임 디자인과 메카닉스 기획서 작성, 사용자 경험 디자인, 2D/3D 아트 제작, 그리고 블루프린트 프로그래밍을 담당했습니다
                         </p>
                     <div class="design-overview">
                         <h2>Design Overview</h2>
@@ -118,9 +137,130 @@
         </section>
     </main>
 
+    <style>
+    .game-media {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .main-media {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: transparent;
+    }
+    
+    #mainImage,
+    #mainVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: transparent;
+    }
+    
+    #mainImage.hidden {
+        display: none !important;
+    }
+    
+    .media-strip {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .thumbnail {
+        width: 100px;
+        height: 60px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .thumbnail.active {
+        border-color: #007bff;
+    }
+
+    .video-thumb {
+        position: relative;
+    }
+    
+    .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    .thumbnail.video-thumb:hover .play-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    </style>
+    
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainVideo = document.getElementById('mainVideo');
+        mainVideo.addEventListener('error', function(e) {
+            console.error('비디오 로드 에러:', e.target.error);
+        });
+    });
+
     function changeImage(src, thumbnail) {
-        document.getElementById('mainImage').src = src;
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        mainImage.classList.remove('hidden');
+        mainVideo.style.display = 'none';
+        mainVideo.pause();
+        mainVideo.src = '';
+        mainVideo.load();
+        mainImage.src = src;
+        updateThumbnailActive(thumbnail);
+    }
+
+    function changeToVideo(src, thumbnail) {
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        try {
+            mainImage.classList.add('hidden');
+            mainVideo.style.display = 'block';
+            mainVideo.src = src;
+            mainVideo.load();
+            
+            mainVideo.onloadeddata = function() {
+                mainVideo.play().catch(function(error) {
+                    console.error('비디오 재생 에러:', error);
+                });
+            };
+            
+            updateThumbnailActive(thumbnail);
+        } catch (error) {
+            console.error('비디오 변경 중 에러:', error);
+        }
+    }
+
+    function updateThumbnailActive(thumbnail) {
         document.querySelectorAll('.thumbnail').forEach(thumb => {
             thumb.classList.remove('active');
         });
@@ -139,4 +279,4 @@
     });
     </script>
 </body>
-</html> 
+</html>
