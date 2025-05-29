@@ -144,8 +144,7 @@ main {
 
 .profile-info h1 {
     font-size: 3.0rem;
-    margin: 0;
-    margin-bottom: 0.1rem;
+    margin: 0 0 0.1rem 0;
 }
 
 .blue-text {
@@ -157,11 +156,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: auto;
-    margin-top: 3.5rem;
-    margin-left: 6rem;
-    max-width: 600px;
+    margin-top: 35.5px;
+    margin-right: 50px;
+    margin-left: 0;
+    max-width: 500px;
 }
 
 .skills span {
@@ -219,7 +219,7 @@ main {
 }
 
 .project:hover::before {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .project img {
@@ -357,31 +357,6 @@ main {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-
-    .blue-text {
-        font-size: 1rem;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .category a {
     text-decoration: none;
     color: #ffffff;
@@ -432,7 +407,7 @@ div > a:hover {
 
 .breadcrumb .separator {
     margin: 0 8px;
-    color: #969696;
+    color: #ffffff;
 }
 
 /* 현재 페이지 제목을 흰색으로 */
@@ -475,18 +450,7 @@ h2 {
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 768px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .social-icons {
@@ -873,5 +837,50 @@ h2 {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    #overview {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills {
+        width: 100%;
+        margin: 2rem 0;
+        justify-content: center;
+    }
+
+    .social-icons {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .social-icons li {
+        position: static !important;
+        margin: 0 !important;
+    }
+
+    /* 첫 줄 6개 아이콘 */
+    .social-icons li:nth-child(-n+6) {
+        flex: 0 0 auto;
+    }
+
+    /* 둘째 줄 7개 아이콘 */
+    .social-icons li:nth-child(n+7) {
+        flex: 0 0 auto;
+    }
 }
 
