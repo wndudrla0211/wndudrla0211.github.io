@@ -181,10 +181,12 @@
     </div>
 
     <script>
-    window.onload = function() {
-        document.getElementById('overlay').style.display = 'block';
-        document.getElementById('constructionPopup').style.display = 'block';
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('constructionPopup').style.display = 'block';
+        }, 100);
+    });
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
