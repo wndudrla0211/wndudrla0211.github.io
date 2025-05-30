@@ -42,7 +42,7 @@
                         1. 1001. 1120. 16.<br>
                         Sixteen songs are waiting for you.<br>
                         If you're curious, try and find them<br>
-                        <span style="color: white;">너라면 뭐든지 잘해낼거야. 밥 잘 챙겨먹고, 잠도 잘 자고, 그리고 늘 행복했으면 좋겠어. <br>
+                        <span style="color: white;">ㅅㅇ아. 너라면 뭐든지 잘해낼거야. 밥 잘 챙겨먹고, 잠도 잘 자고, 그리고 늘 행복했으면 좋겠어. <br>
                         미안했다. 그래도 너가 인생에서 가장 힘들 때 생각나고 찾는 사람이 나이길. 그래서 나를 불러주길.</span> <br>
                     </p>
                 </div>
@@ -53,7 +53,7 @@
                 <li><a href="https://github.com/wndudrla0211" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
                 <li><a href="#" id="discord-icon" aria-label="Discord"><i class="fab fa-discord"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/ju-young-alex-kim-644190301/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/wndudrla_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://www.youtube.com/watch?v=_a6AS1HwHmo" target="_blank" aria-label="Broken Heart"><i class="fas fa-heart-crack"></i></a></li>
                 <li><a href="https://www.youtube.com/watch?v=u9DJJa2P_Fc" target="_blank" aria-label="Heart"><i class="fas fa-heart"></i></a></li>
                 <li><a href="https://www.youtube.com/watch?v=hVXcsCpDo1c" target="_blank" aria-label="Music"><i class="fas fa-music"></i></a></li>
@@ -176,8 +176,12 @@
             현재 웹사이트를 업데이트 중입니다.<br>
             일부 기능이 정상적으로 작동하지 않을 수 있습니다.
         </p>
+        <div class="password-section">
+            <input type="password" id="popupPassword" placeholder="비밀번호를 입력하세요">
+            <p id="passwordError" style="color: red; display: none;">비밀번호가 틀렸습니다.</p>
+        </div>
         <p class="last-updated">Last Updated: 2025.05.29</p>
-        <button class="popup-close" onclick="closePopup()">OK / 확인</button>
+        <button class="popup-close" onclick="checkPassword()">OK / 확인</button>
     </div>
 
     <script>
@@ -187,6 +191,15 @@
             document.getElementById('constructionPopup').style.display = 'block';
         }, 100);
     });
+
+    function checkPassword() {
+        const password = document.getElementById('popupPassword').value;
+        if (password === '1120') {
+            closePopup();
+        } else {
+            document.getElementById('passwordError').style.display = 'block';
+        }
+    }
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
