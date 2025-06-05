@@ -62,11 +62,11 @@
                         <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/project2 mainmenu.png', this)">
                             <img src="../largefile/images/game screenshots/project2 mainmenu.png" alt="Main Screenshot">
                         </div>
-                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/CGT 255 Alpha Deliverable (1).mp4', this)">
+                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/videos/cgt255/CGT 255 Alpha Deliverable.mp4', this)">
                             <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot4.jpg" alt="Video Preview">
                             <div class="play-overlay">▶</div>
                         </div>
-                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/soul taker gameplay.mp4', this)">
+                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/videos/cgt255/soul taker.mp4', this)">
                             <img src="../largefile/images/game screenshots/soultaker screenshot.jpg" alt="Video Preview">
                             <div class="play-overlay">▶</div>
                         </div>
@@ -128,6 +128,7 @@
                     </div>
                 </div>
 
+               
                 <div class="game-description">
                     <h2>About This Game</h2>
                     <p>Fast-paced free-for-all deathmatch FPS where players compete individually in intense arena combat. Each match is a high-energy battle where players choose unique heroes and fight to achieve the highest elimination score. The game rewards quick reflexes, tactical positioning, and effective use of hero abilities in chaotic multiplayer combat scenarios.
@@ -136,12 +137,27 @@
                         플레이어들이 개인전으로 경쟁하는 빠른 템포의 데스매치 FPS 게임입니다. 각 매치는 플레이어들이 고유한 영웅을 선택하고 최고의 처치 점수를 달성하기 위해 싸우는 고강도 전투로 이루어집니다. 이 게임은 혼란스러운 멀티플레이어 전투 상황에서 빠른 반사 신경, 전술적 위치 선정, 그리고 영웅 능력의 효과적인 사용을 보상합니다.
 
                     </p>
+                    <h2>About This Course</h2>
+                    <p>CGT 25500 is a game development course at Purdue University that focuses on creating multiplayer games using Unreal Engine 5. 
+                        This course provides hands-on experience with the complete game development pipeline, from initial concept to development and testing.
+                    </p>
+                    <p>
+                        CGT 25500은 퍼듀 대학교의 게임 개발 수업으로, 언리얼 엔진 5를 활용하여 멀티플레이어 게임을 제작하는 과정입니다. 
+                        이 수업에서는 게임 기획부터 개발, 테스트까지 전반적인 게임 개발 파이프라인을 경험할 수 있습니다.
+                    </p>
+                    <div class="design-overview">
+                        <h2>Course Overview</h2>
+                        <p>CGT 25500 covers Unreal Engine 5 fundamentals, Multiplayer Game Development, Game Design, and Game Programming.</p>
+                        <p>
+                            CGT 25500 수업에서는 언리얼 엔진 5 기초, 멀티플레이어 게임 개발, 게임 디자인, 게임 프로그래밍 등을 학습했습니다.
+                        </p>
+                    </div>
                     <div class="game-description">
                         <h2>Contributions</h2>
                         <p>Game Design, Mechanics Documentations, UX Design, 2D/3D Art,  Blueprints
                         </p>
                         <p>
-                            이 프로젝트에서는 게임 디자인과 메카닉스 기획서 작성, 사용자 경험 디자인, 2D/3D 아트 제작, 그리고 블루프린트 프로그래밍을 담당했습니다
+                            이 프로젝트에서는 게임 디자인과 메카닉스 기획서 작성, 사용자 경험 디자인, 2D/3D 아트 제작, 그리고 블루프린트 프로그래밍을 담당했습니다.
 
                         </p>
                     <div class="design-overview">
@@ -234,13 +250,14 @@
 
     .media-fallback {
         position: absolute;
-        bottom: 10px;
+        bottom: 60px;
         left: 10px;
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
         padding: 5px 10px;
         border-radius: 5px;
         font-size: 14px;
+        z-index: 3;
     }
 
     .media-fallback a {

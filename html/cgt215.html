@@ -12,10 +12,9 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGT 21500: Game Design Studio</title>
+    <title>Project 2 - Ju-Young Kim (Alex)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
-
 
 </head>
 <body>
@@ -36,7 +35,7 @@
             <span class="separator">></span>
             <a href="../index.html#categories">Categories</a>
             <span class="separator">></span>
-            <a href="purdue_projects.html">Purdue Projects</a>
+            <a href="../html/purdue_projects.html">Purdue Projects</a>
             <span class="separator">></span>
             <a href="cgt215.html">CGT 21500: Game Design Studio</a>
         </nav>
@@ -44,35 +43,36 @@
 
     <main>
         <h1 class="page-title">CGT 21500: Game Design Studio</h1>
-        
         <section class="game-detail">
             <div class="game-content">
                 <div class="game-media">
                     <div class="main-media">
-                        <img id="mainImage" src="../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg" alt="Inchainity gameplay">
+                        <img id="mainImage" src="../largefile/images/game screenshots/cgt215/cgt215 screenshot.jpg" alt="project2 mainmenu">
+                        <video id="mainVideo" style="display: none;" controls preload="none" playsinline>
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="media-fallback">
+                            If the video doesn't play, please check it on 
+                            <a href="https://youtu.be/xKsZgkpGmEw" target="_blank">YouTube1</a>.
+                        </div>
+                        
                     </div>
                     <div class="media-strip">
-                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 172 exercise1 thumb.jpg" alt="Main Screenshot">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/cgt215/cgt215 screenshot.jpg', this)">
+                            <img src="../largefile/images/game screenshots/cgt215/cgt215 screenshot.jpg" alt="Main Screenshot">
                         </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 exercise1 thumb2.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 172 exercise1 thumb2.jpg" alt="Exercises">
+                        <div class="thumbnail video-thumb" onclick="changeToVideo('../largefile/videos/cgt215/cgt215final.mp4', this)">
+                            <img src="../largefile/images/game screenshots/cgt215/cgt215 screenshot.jpg" alt="Video Preview">
+                            <div class="play-overlay">▶</div>
                         </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project1 thumb.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 172 project1 thumb.jpg" alt="Exercises">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project2 thumb.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 172 project2 thumb.jpg" alt="Exercises">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/cgt 172 project3 thumb.jpg', this)">
-                            <img src="../largefile/images/game screenshots/cgt 172 project3 thumb.jpg" alt="Exercises">
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="game-info-sidebar">
                     <div class="game-actions">
-                        <a href="https://www.youtube.com/watch?v=_e-NatxmeMg" class="play-button">Play Game</a>
+                        <a href="https://www.youtube.com/watch?v=0bhsXykXxfg" class="play-button">Play Game</a>
                     </div>
 
                     <div class="info-box">
@@ -82,16 +82,16 @@
                             <span class="value">Completed</span>
                         </div>
                         <div class="detail-item">
-                            <span class="label">Platform:</span>
-                            <span class="value">Purdue University</span>
+                            <span class="label">Development Period:</span>
+                            <span class="value">September - December, 2024</span>
                         </div>
                         <div class="detail-item">
                             <span class="label">Genre:</span>
-                            <span class="value">Fighting, Action</span>
+                            <span class="value">Developed as a part of CGT 21500</span>
                         </div>
                         <div class="detail-item">
                             <span class="label">Made with:</span>
-                            <span class="value">Unreal Engine 5</span>
+                            <span class="value">C++ and Visual Studio 2022</span>
                         </div>
                     </div>
 
@@ -99,53 +99,183 @@
                         <h3>Development Team</h3>
                         <div class="team-member">
                             <span class="role">Design:</span>
-                            <span class="name">Ju-Young Kim (Alex)</span>
+                            <span class="name">Ju-Young Kim (Alex), Jack DuBord</span>
                         </div>
                         <div class="team-member">
                             <span class="role">Programming:</span>
-                            <span class="name">Ju-Young Kim (Alex)</span>
+                            <span class="name">Ju-Young Kim (Alex), Connor Schaaf, Henry Dix</span>
                         </div>
                         <div class="team-member">
                             <span class="role">Audio:</span>
-                            <span class="name">Ju-Young Kim (Alex)</span>
+                            <span class="name">Nate Teague</span>
                         </div>
                         <div class="team-member">
                             <span class="role">Art:</span>
-                            <span class="name">Ju-Young Kim (Alex)</span>
+                            <span class="name">Ju-Young Kim (Alex), Vivian Shiang</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="game-description">
                     <h2>About This Course</h2>
-                    <p>Through CGT 172, I learned the fundamental principles of UX design and user-centered design processes. Through weekly assignments, I practiced and understood various UX methodologies including user research, wireframing, prototyping, and usability testing. I completed projects that implement essential UX design principles and created user-friendly interfaces as required by the course. Through this process, I was able to understand the importance of user experience and learn the fundamental aspects of effective interface design. Exercises and Projects include User Research Methods, Wireframing Techniques, Interactive Prototyping, Usability Testing, Information Architecture, Visual Design Principles, User Interface Design Patterns.
+                    <p>Through CGT 21500, I learned fundamental C++ programming concepts using Visual Studio 2022. Through weekly assignments, I practiced and understood core programming principles including object-oriented programming, data structures, algorithms, and game logic implementation. I completed various programming projects that demonstrate understanding of C++ fundamentals and game programming concepts as required by the course.</p>
+                    <p>
+                        CGT 21500 수업을 통해 Visual Studio 2022를 사용한 C++ 프로그래밍의 기초 개념을 학습했습니다. 매주 진행된 과제들을 통해 객체 지향 프로그래밍, 자료구조, 알고리즘, 게임 로직 구현 등 핵심 프로그래밍 원리들을 연습하고 이해했습니다. 수업에서 요구하는 C++ 기초와 게임 프로그래밍 개념을 보여주는 다양한 프로그래밍 프로젝트들을 완성했습니다.
                     </p>
-                    <p>CGT 172를 통해 UX 디자인의 기본 원칙과 사용자 중심 디자인 프로세스를 학습했습니다. 매주 과제를 통해 사용자 리서치, 와이어프레이밍, 프로토타이핑, 사용성 테스트 등 다양한 UX 방법론을 실습하고 이해했습니다. 수업에서 요구하는 필수 UX 디자인 원칙을 구현하는 프로젝트를 완성하고 사용자 친화적인 인터페이스를 제작했습니다. 이 과정을 통해 사용자 경험의 중요성을 이해하고 효과적인 인터페이스 디자인의 기본적인 측면을 학습할 수 있었습니다. 실습과 프로젝트에는 사용자 리서치 방법론, 와이어프레이밍 기법, 인터랙티브 프로토타이핑, 사용성 테스트, 정보 아키텍처, 시각 디자인 원칙, 사용자 인터페이스 디자인 패턴이 포함되어 있습니다.
-                    </p>
-                        
                     <div class="design-overview">
-                        <h2>Exercises Overview</h2>
-                        <div class="exercise-links">
-                            <ul>
-                                <li><a href="../largefile/pdfs/cgt 172 ex1 team 3.pdf" target="_blank">Exercise 1: Overview of UX Trends in Game Development and VR/AR</a></li>
-                                <li><a href="../largefile/pdfs/cgt 172 project 1.pdf" target="_blank">Project 1: What can a Starship do?</a></li>
-                                <li><a href="../largefile/pdfs/cgt 172 project 2.pdf" target="_blank">Project 2: Embodied Shopping Interactions Design Documentation</a></li>
-                                <li><a href="../largefile/pdfs/cgt 172 project 3.pdf" target="_blank">Project 3: Fake Out w/ AI</a></li>
-                            </ul>
-                        </div>
+                        <h2>Course Overview</h2>
+                        <p>CGT 21500 covers C++ fundamentals, Object-Oriented Programming, Data Structures and Algorithms, Game Logic Implementation, Console Applications, and Visual Studio debugging techniques.</p>
+                        <p>
+                            CGT 21500 수업에서는 C++ 기초, 객체 지향 프로그래밍, 자료구조와 알고리즘, 게임 로직 구현, 콘솔 애플리케이션 개발, Visual Studio 디버깅 기법 등을 학습했습니다.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-                
+    <style>
+    .game-media {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .main-media {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: transparent;
+    }
+    
+    #mainImage,
+    #mainVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: transparent;
+    }
+    
+    #mainImage.hidden {
+        display: none !important;
+    }
+    
+    .media-strip {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .thumbnail {
+        width: 100px;
+        height: 60px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .thumbnail.active {
+        border-color: #007bff;
+    }
 
+    .video-thumb {
+        position: relative;
+    }
+    
+    .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    .thumbnail.video-thumb:hover .play-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .media-fallback {
+        position: absolute;
+        bottom: 60px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        z-index: 3;
+    }
+
+    .media-fallback a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .media-fallback a:hover {
+        text-decoration: underline;
+    }
+    </style>
+    
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainVideo = document.getElementById('mainVideo');
+        mainVideo.addEventListener('error', function(e) {
+            console.error('비디오 로드 에러:', e.target.error);
+        });
+    });
+
     function changeImage(src, thumbnail) {
         const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        mainImage.classList.remove('hidden');
+        mainVideo.style.display = 'none';
+        mainVideo.pause();
+        mainVideo.src = '';
+        mainVideo.load();
         mainImage.src = src;
         updateThumbnailActive(thumbnail);
+    }
+
+    function changeToVideo(src, thumbnail) {
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        try {
+            mainImage.classList.add('hidden');
+            mainVideo.style.display = 'block';
+            mainVideo.src = src;
+            mainVideo.load();
+            
+            mainVideo.onloadeddata = function() {
+                mainVideo.play().catch(function(error) {
+                    console.error('비디오 재생 에러:', error);
+                });
+            };
+            
+            updateThumbnailActive(thumbnail);
+        } catch (error) {
+            console.error('비디오 변경 중 에러:', error);
+        }
     }
 
     function updateThumbnailActive(thumbnail) {
@@ -166,52 +296,5 @@
         }
     });
     </script>
-
-    <style>
-    .exercise-links {
-        margin-top: 20px;
-    }
-
-    .exercise-links h3 {
-        color: #333;
-        margin: 20px 0 10px 0;
-        font-size: 1.2em;
-    }
-
-    .exercise-links ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .exercise-links li {
-        margin: 10px 0;
-    }
-
-    .exercise-links a {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 8px 15px;
-        border-radius: 4px;
-        transition: all 0.3s;
-        border: 1px solid #ffffff;
-        display: inline-block;
-    }
-
-    .exercise-links a:hover {
-        background-color: #f0f0f0;
-        color: #0066cc;
-        text-decoration: underline;
-        border-color: #0066cc;
-    }
-
-    .korean-translation {
-        margin-top: 20px;
-        padding: 15px;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 5px;
-        font-size: 0.95em;
-        line-height: 1.6;
-    }
-    </style>
 </body>
 </html>

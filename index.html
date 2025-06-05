@@ -98,12 +98,12 @@
                     </div>
                 </a>
                 
-                <a href="html/project3.html" class="featured-card icon-with-x">
+                <a href="html/project3.html" class="featured-card">
                     <h2>Project 3</h2>
-                    <p>Description of Project 3</p>
+                    <p>Project 3</p>
                     <div class="tags">
-                        <span class="tag">Tag 1</span>
-                        <span class="tag">Tag 2</span>
+                        <span class="tag">Unreal Engine 5</span>
+                        <span class="tag">Single Player</span>
                     </div>
                 </a>
             </div>
@@ -124,7 +124,7 @@
                 <a href="html/gameideas.html" class="category">
                     <span>Game Ideas</span>
                 </a>
-                <a href="html/animations.html" class="category icon-with-x">
+                <a href="html/animations.html" class="category">
                     <span>Animations</span>
                 </a>
                 <a href="html/2darts.html" class="category">
@@ -162,44 +162,6 @@
         </div>
     </div>
 
-    <div class="overlay" id="overlay"></div>
-    <div class="construction-popup" id="constructionPopup">
-        <h2>🚧 Under Construction🚧<br>
-            🚧웹사이트 업데이트 진행중🚧 </h2>
-        <p>
-            This website is currently under development. Some features may not work properly.<br>
-            현재 웹사이트를 업데이트 중입니다.<br>
-            일부 기능이 정상적으로 작동하지 않을 수 있습니다. 7글자.
-        </p>
-        <div class="password-section">
-            <input type="password" id="popupPassword" placeholder="Enter Password / 비밀번호를 입력하세요">
-            <p id="passwordError" style="color: red; display: none;">Incorrect password / 비밀번호가 틀렸습니다.</p>
-        </div>
-        <p class="last-updated">Last Updated: 2025.05.29</p>
-        <button class="popup-close" onclick="checkPassword()">OK / 확인</button>
-    </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('constructionPopup').style.display = 'block';
-        }, 100);
-    });
-
-    function checkPassword() {
-        const password = document.getElementById('popupPassword').value;
-        if (password === '1080221') {
-            closePopup();
-        } else {
-            document.getElementById('passwordError').style.display = 'block';
-        }
-    }
-
-    function closePopup() {
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('constructionPopup').style.display = 'none';
-    }
-    </script>
 </body>
 </html>

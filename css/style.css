@@ -284,38 +284,30 @@ main {
     background-position: center center;
 }
 
-.category[href="html/about.html"] {
-    background-image: url('../largefile/images/models/aboutme.jpg');
-}
-
 .category[href="html/2darts.html"] {
-    background-image: url('../largefile/images/models/cgt 118 final project ju-young kim(alex).jpg');
-}
-
-.category[href="html/blog.html"] {
-    background-image: url('../largefile/images/models/gym.jpg');
+    background-image: url('../largefile/images/art work/cgt 118 final project ju-young kim(alex).jpg');
 }
 
 .category[href="html/gameideas.html"] {
-    background-image: url('../largefile/images/models/gamedesign.png');
+    background-image: url('../largefile/images/background/gamedesign.png');
 }
 
 .category[href="html/purdue_projects.html"] {
     background-image: url('../largefile/images/background/Purdue-University-Logo.jpg');
 }
 .category[href="html/cgt255.html"] {
-    background-image: url('../largefile/images/models/gamedesign.png');
+    background-image: url('../largefile/images/background/gamedesign.png');
 }
 /* 3D Art 카테고리 */
 .category[href="html/3dart.html"] {
-    background-image: url('../largefile/images/models/3d1.png');
+    background-image: url('../largefile/images/art work/3d1.png');
     background-size: cover;
     background-position: center;
 }
 
 /* FX Arts 카테고리 */
 .category[href="html/fxarts.html"] {
-    background-image: url('../largefile/images/models/fx2.png');
+    background-image: url('../largefile/images/art work/fx2.png');
     background-size: cover;
     background-position: center;
 }
@@ -516,9 +508,9 @@ h2 {
 .popup {
     display: none;
     position: fixed;
-    top: 80px;  /* 상단에서 약간 떨어진 위치 */
-    right: 20px;  /* 오른쪽에서 약간 떨어진 위치 */
-    transform: none;  /* 중앙 정렬 제거 */
+    top: 80px;
+    right: 20px;
+    transform: none;
     background-color: rgba(25, 25, 25, 0.95);
     padding: 20px;
     border-radius: 10px;
@@ -526,53 +518,19 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     animation: slideIn 0.3s ease;
 }
+
 /* Animations 카테고리 */
 .category[href="html/animations.html"] {
-    background-image: url('../largefile/images/models/animation.png');
+    background-image: url('../largefile/images/art work/animation\ screen.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.category[href="html/animations.html"]::after {
-    content: '×';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: red;
-    font-weight: bold;
-    font-size: 2em;
-    z-index: 3;
-}
-
-.icon-with-x {
-    position: relative;
-}
-
-.icon-with-x::after {
-    content: '×';
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    color: red;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.featured-card.icon-with-x::after {
-    content: '×';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: red;
-    font-weight: bold;
-    font-size: 2em;
-    z-index: 3;
-} 
 .popup-content {
     color: white;
-    text-align: left;  /* 왼쪽 정렬 */
+    text-align: left;
     position: relative;
-    min-width: 250px;  /* 최소 너비 설정 */
+    min-width: 250px;
 }
 
 .popup::before {
@@ -765,7 +723,7 @@ h2 {
 
 .featured-card[href="html/project3.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../largefile/images/project3-bg.png');
+                url('../largefile/images/game screenshots/cgt245 project/cgt245 screenshot1.jpg');
     background-size: cover;
     background-position: center;
 }
