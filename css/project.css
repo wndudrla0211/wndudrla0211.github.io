@@ -138,7 +138,13 @@ main {
     padding: 20px;
 }
 
-.play-button {
+.game-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.play-button, .download-button {
     display: block;
     background: linear-gradient(to right, #00ffff, #00cccc);
     color: #000;
@@ -147,11 +153,10 @@ main {
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 20px;
     font-size: 18px;
 }
 
-.play-button:hover {
+.play-button:hover, .download-button:hover {
     background: linear-gradient(to right, #00cccc, #009999);
 }
 
@@ -214,6 +219,11 @@ main {
     margin-top: 15px;
 }
 
+.download-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     main {
         padding: 0 1rem;
@@ -250,7 +260,7 @@ main {
         height: 45px;
     }
 
-    .play-button {
+    .play-button, .download-button {
         font-size: 16px;
         padding: 12px;
     }
@@ -288,6 +298,11 @@ main {
     .thumbnail {
         width: 60px;
         height: 34px;
+    }
+
+    .play-button, .download-button {
+        font-size: 16px;
+        padding: 12px;
     }
 }
 
