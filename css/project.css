@@ -206,29 +206,12 @@ main {
 
 .design-overview {
     margin-top: 30px;
-    width: 100%;
-    position: relative;
 }
 
 .design-overview iframe {
-    width: 100%;
-    height: 800px;
     border: none;
     border-radius: 10px;
     margin-top: 15px;
-    background: #fff;
-}
-
-.pdf-fallback {
-    display: none;
-    margin-top: 15px;
-    text-align: center;
-    color: #fff;
-}
-
-.pdf-fallback a {
-    color: #00ffff;
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -275,14 +258,6 @@ main {
     .info-box, .team-box {
         padding: 10px;
     }
-
-    .design-overview iframe {
-        height: 600px;
-    }
-
-    .pdf-fallback {
-        display: block;
-    }
 }
 
 @media (max-width: 480px) {
@@ -313,14 +288,6 @@ main {
     .thumbnail {
         width: 60px;
         height: 34px;
-    }
-
-    .design-overview {
-        margin-top: 20px;
-    }
-
-    .design-overview iframe {
-        height: 400px;
     }
 }
 

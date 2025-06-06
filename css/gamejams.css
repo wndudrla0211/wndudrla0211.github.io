@@ -115,6 +115,10 @@ body {
         gap: 20px;
     }
 
+    .game-card {
+        max-width: 100%;
+    }
+
     .game-info {
         padding: 15px;
     }
@@ -169,8 +173,9 @@ body {
         font-size: 1em;
     }
 
-    .game-image {
-        aspect-ratio: 3/2;
+    .game-tags span {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.35rem;
     }
 }
 

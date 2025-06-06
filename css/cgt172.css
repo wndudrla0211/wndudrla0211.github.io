@@ -114,14 +114,14 @@ body > h2 {
         font-size: 1rem;
     }
 
-    .patch-content h3 {
-        font-size: 1.2rem;
-        margin: 1.5rem 0 0.8rem;
-    }
-
     .info-box, .team-box {
         padding: 12px;
         margin-bottom: 15px;
+    }
+
+    .patch-content h3 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.8rem;
     }
 }
 
@@ -144,13 +144,13 @@ body > h2 {
         font-size: 0.9rem;
     }
 
-    .patch-content h3 {
-        font-size: 1.1rem;
-        margin: 1.2rem 0 0.6rem;
-    }
-
     .info-box, .team-box {
         padding: 10px;
         margin-bottom: 12px;
+    }
+
+    .patch-content h3 {
+        font-size: 1.1rem;
+        margin: 1.2rem 0 0.6rem;
     }
 } 
