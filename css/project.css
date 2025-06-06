@@ -151,19 +151,6 @@ main {
     font-size: 18px;
 }
 
-.play-button {
-    display: block;
-    background: linear-gradient(to right, #00ffff, #00cccc);
-    color: #000;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
 .play-button:hover {
     background: linear-gradient(to right, #00cccc, #009999);
 }
@@ -219,17 +206,121 @@ main {
 
 .design-overview {
     margin-top: 30px;
+    width: 100%;
+    position: relative;
 }
 
 .design-overview iframe {
+    width: 100%;
+    height: 800px;
     border: none;
     border-radius: 10px;
     margin-top: 15px;
+    background: #fff;
+}
+
+.pdf-fallback {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.pdf-fallback a {
+    color: #00ffff;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
+    main {
+        padding: 0 1rem;
+    }
+
     .game-content {
         grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin: 30px 0;
+        padding-left: 10px;
+    }
+
+    .game-title-section h1 {
+        font-size: 24px;
+    }
+
+    .game-meta span {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .media-strip {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 45px;
+    }
+
+    .play-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .info-box, .team-box {
+        padding: 10px;
+    }
+
+    .design-overview iframe {
+        height: 600px;
+    }
+
+    .pdf-fallback {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-content {
+        padding: 15px;
+    }
+
+    .game-header {
+        margin-bottom: 15px;
+    }
+
+    .game-meta {
+        font-size: 0.9em;
+    }
+
+    .game-description {
+        padding: 15px;
+    }
+
+    .game-description h2 {
+        font-size: 1.5em;
+    }
+
+    .game-description p {
+        font-size: 0.9em;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 34px;
+    }
+
+    .design-overview {
+        margin-top: 20px;
+    }
+
+    .design-overview iframe {
+        height: 400px;
     }
 }
 

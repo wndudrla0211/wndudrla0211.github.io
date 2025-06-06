@@ -108,7 +108,69 @@ body {
 
 @media (max-width: 768px) {
     .game-jams {
-        padding: 0 10px 40px;
+        padding: 0 1rem 30px;
+    }
+
+    .games-grid {
+        gap: 20px;
+    }
+
+    .game-info {
+        padding: 15px;
+    }
+
+    .game-info h2 {
+        font-size: 1.6em;
+    }
+
+    .game-meta {
+        font-size: 1.1em;
+    }
+
+    .game-tags {
+        flex-wrap: wrap;
+    }
+
+    .game-tags span {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-jams {
+        padding: 0 0.8rem 20px;
+    }
+
+    .games-grid {
+        gap: 15px;
+    }
+
+    .game-info {
+        padding: 12px;
+    }
+
+    .game-info h2 {
+        font-size: 1.4em;
+    }
+
+    .game-meta {
+        font-size: 1em;
+        margin: 6px 0;
+    }
+
+    .game-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .price {
+        font-size: 1em;
+    }
+
+    .game-image {
+        aspect-ratio: 3/2;
     }
 }
 

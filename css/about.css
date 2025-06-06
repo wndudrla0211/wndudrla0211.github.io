@@ -117,7 +117,65 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .about-section {
-        padding: 0 10px 40px;
+        padding: 0 1rem 30px;
+    }
+
+    .about-section h1 {
+        font-size: 1.6em;
+        padding: 15px 0;
+    }
+
+    .about-image {
+        padding-top: 60%;
+    }
+
+    .about-content {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    body > h2 {
+        font-size: 2em;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 0 0.8rem 20px;
+    }
+
+    .about-section h1 {
+        font-size: 1.4em;
+        padding: 12px 0;
+    }
+
+    .about-content {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .about-image {
+        padding-top: 70%;
+    }
+
+    body > h2 {
+        font-size: 1.8em;
+        margin: 20px auto;
+    }
+
+    .resume-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
     }
 }
 

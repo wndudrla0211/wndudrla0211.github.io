@@ -170,9 +170,58 @@
 
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 0 1rem;
     }
     
+    .content-section {
+        padding: 0 1rem 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .routine-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .routine-card {
+        padding: 1.5rem;
+    }
+
+    .routine-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .shake-container {
+        gap: 1rem;
+    }
+
+    .shake-card {
+        padding: 1.2rem;
+    }
+
+    .shake-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .workout-content {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    body > h2 {
+        font-size: 2em;
+        margin: 30px auto;
+        padding: 0 1rem;
+    }
+
+    .content-section > p {
+        padding-left: 0;
+        font-size: 1rem;
+    }
+
     .routine-container, .shake-container {
         grid-template-columns: 1fr;
     }
@@ -180,15 +229,36 @@
     .shake-details {
         grid-template-columns: 1fr;
     }
+}
 
-    .workout-content {
-        padding: 30px;
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.4rem;
     }
 
     .routine-container {
-        grid-template-columns: 1fr;
-        width: 100%;
-        padding: 0 1rem;
+        padding: 15px;
+    }
+
+    .routine-card {
+        padding: 1rem;
+    }
+
+    .shake-card {
+        padding: 1rem;
+    }
+
+    .ingredients ul,
+    .nutrition ul {
+        gap: 0.3rem 0.5rem;
+    }
+
+    .workout-content {
+        padding: 15px;
+    }
+
+    body > h2 {
+        font-size: 1.8em;
     }
 }
 
