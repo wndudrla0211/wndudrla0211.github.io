@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 95%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.score-container, .time-container {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 2rem 0;
+    min-height: 400px;
+}
+
+.tile {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 80px;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tile:hover {
+    transform: scale(0.95);
+    border-color: #999;
+}
+
+.tile.selected {
+    transform: scale(0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-color: #666;
+}
+
+.controls {
+    text-align: center;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .score-container, .time-container {
+        font-size: 1rem;
+    }
+
+    .game-board {
+        gap: 5px;
+        width: 100%;
+        max-width: 320px;
+        margin: 1rem auto;
+        min-height: 320px;
+    }
+
+    .tile {
+        min-height: 60px;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .tile:active {
+        transform: scale(0.9);
+    }
+
+    button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 200px;
+        margin: 0.5rem auto;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    button:active {
+        background: #1e3c72;
+    }
+} 

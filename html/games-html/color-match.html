@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match Puzzle</title>
+    <link rel="stylesheet" href="../../css/games-css/color-match.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Color Match Puzzle</h1>
+            <div class="score-container">
+                <span>Matched / 매칭: </span>
+                <span id="score">0</span><span>/8</span>
+            </div>
+            <div class="time-container">
+                <span>Time / 시간: </span>
+                <span id="time">60</span>s
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <div class="controls">
+            <button id="startBtn">Start Game / 게임 시작</button>
+            <button id="restartBtn" style="display: none;">Restart / 다시 시작</button>
+        </div>
+    </div>
+
+    <!-- 오디오 요소 추가 -->
+    <audio id="matchSound" src="../../sounds/match.mp3" preload="auto"></audio>
+    <audio id="noMatchSound" src="../../sounds/no-match.mp3" preload="auto"></audio>
+    <audio id="startSound" src="../../sounds/start.mp3" preload="auto"></audio>
+    <audio id="winSound" src="../../sounds/win.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="../../sounds/game-over.mp3" preload="auto"></audio>
+    <audio id="clickSound" src="../../sounds/click.mp3" preload="auto"></audio>
+
+    <script src="../../js/games-js/color-match.js"></script>
+</body>
+</html> 
