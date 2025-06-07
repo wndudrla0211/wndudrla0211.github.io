@@ -737,7 +737,7 @@ function continueGame() {
 }
 
 function showCredits() {
-    alert('Immature Love - A Visual Novel Game\n\nStory & Programming: Ju-Young Kim (Alex)\nBased on: Personal experiences\n\nThank you for playing!');
+    alert('Creator: Ju-Young Kim (Alex)\nTheme: Immature Love\n\nA visual novel game that deals with the complexity and growth of realistic relationships.');
 }
 
 function showCurrentStory() {
@@ -919,7 +919,7 @@ function loadGame(slotNumber) {
 }
 
 function closeSaveScreen() {
-    document.getElementById('saveOverlay').style.display = 'none';
+    elements.saveOverlay.style.display = 'none';
 }
 
 function goToTitle() {
