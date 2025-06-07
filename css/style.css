@@ -724,12 +724,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-.featured-card[href="html/project3.html"] {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../largefile/images/game screenshots/cgt245 project/cgt245 screenshot1.jpg');
-    background-size: cover;
-    background-position: center;
-}
 
 .featured-card[href="html/project5(featured).html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
