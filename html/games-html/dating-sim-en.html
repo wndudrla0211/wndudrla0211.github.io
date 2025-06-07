@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immature Love - Visual Novel Game</title>
+    <link rel="stylesheet" href="../../css/games-css/dating-sim-en.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1>Immature Love</h1>
+            <div class="header-buttons">
+                <button id="menuBtn" class="header-btn">Menu</button>
+                <button id="saveBtn" class="header-btn">Save</button>
+                <button id="loadBtn" class="header-btn">Load</button>
+            </div>
+        </header>
+
+        <!-- Main Game Screen -->
+        <div class="game-screen">
+            <!-- Character Image Area -->
+            <div class="character-area">
+                <div id="characterImage" class="character-image"></div>
+            </div>
+
+            <!-- Text Box -->
+            <div class="text-box">
+                <div class="speaker-name" id="speakerName"></div>
+                <div class="dialogue-text" id="dialogueText"></div>
+                <div class="text-indicator">▼</div>
+            </div>
+
+            <!-- Choice Container -->
+            <div class="choice-container" id="choiceContainer"></div>
+        </div>
+
+        <!-- Side Panel -->
+        <div class="side-panel" id="sidePanel">
+            <div class="relationship-status">
+                <h3>Relationships</h3>
+                <div class="relationship-bar">
+                    <span>Jieun (Ex-girlfriend)</span>
+                    <div class="bar">
+                        <div class="bar-fill" id="jieunsBar" style="width: 30%"></div>
+                    </div>
+                    <span id="jieunScore">30/100</span>
+                </div>
+                <div class="relationship-bar">
+                    <span>Minsu (Ex-boyfriend)</span>
+                    <div class="bar">
+                        <div class="bar-fill jealousy" id="minsuBar" style="width: 70%"></div>
+                    </div>
+                    <span id="minsuScore">Jealousy: 70</span>
+                </div>
+                <div class="relationship-bar">
+                    <span>Self-Confidence</span>
+                    <div class="bar">
+                        <div class="bar-fill confidence" id="confidenceBar" style="width: 20%"></div>
+                    </div>
+                    <span id="confidenceScore">20/100</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <div class="game-title">
+                <h1>Immature Love</h1>
+                <p class="subtitle">A Realistic Love Story</p>
+            </div>
+            
+            <div class="start-menu">
+                <button id="newGameBtn" class="menu-btn">New Game</button>
+                <button id="continueBtn" class="menu-btn">Continue</button>
+                <button id="creditsBtn" class="menu-btn">Credits</button>
+            </div>
+        </div>
+
+        <!-- Menu Overlay -->
+        <div class="menu-overlay" id="menuOverlay">
+            <div class="menu-content">
+                <h2>Game Menu</h2>
+                <button class="menu-item" id="resumeBtn">Continue Game</button>
+                <button class="menu-item disabled" id="settingsBtn">Settings</button>
+                <button class="menu-item" id="titleBtn">Back to Title</button>
+            </div>
+        </div>
+
+        <!-- Save/Load Overlay -->
+        <div class="save-overlay" id="saveOverlay">
+            <div class="save-content">
+                <h2 id="saveTitle">Save Game</h2>
+                <div class="save-slots">
+                    <div class="save-slot" data-slot="1">
+                        <div class="slot-number">Slot 1</div>
+                        <div class="slot-info">Empty</div>
+                    </div>
+                    <div class="save-slot" data-slot="2">
+                        <div class="slot-number">Slot 2</div>
+                        <div class="slot-info">Empty</div>
+                    </div>
+                    <div class="save-slot" data-slot="3">
+                        <div class="slot-number">Slot 3</div>
+                        <div class="slot-info">Empty</div>
+                    </div>
+                </div>
+                <button class="close-btn" id="closeSaveBtn">Close</button>
+            </div>
+        </div>
+
+        <!-- Ending Screen -->
+        <div class="ending-screen" id="endingScreen">
+            <div class="ending-content">
+                <h2 id="endingTitle"></h2>
+                <div id="endingText"></div>
+                <button class="ending-btn" id="restartBtn">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/games-js/dating-sim-en.js"></script>
+</body>
+</html> 

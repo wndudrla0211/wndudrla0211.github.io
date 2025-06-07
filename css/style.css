@@ -731,6 +731,25 @@ h2 {
     background-position: center;
 }
 
+.featured-card[href="html/project5(featured).html"] {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+                url('../largefile/images/game screenshots/love/love2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-card .description {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.featured-card .description small {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+    display: block;
+    margin: 2px 0;
+}
+
 /* 컨텐츠 섹션 공통 스타일 */
 .content-section {
     margin-bottom: 3rem;

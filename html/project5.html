@@ -12,9 +12,10 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Game - Ju-Young Kim (Alex)</title>
+    <title>Project 5 - 미성숙한 사랑 - Ju-Young Kim (Alex)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
+
 </head>
 <body>
     <header>
@@ -36,60 +37,69 @@
             <span class="separator">></span>
             <a href="../html/games.html">Games</a>
             <span class="separator">></span>
-            <a href="project5.html">Mobile Game</a>
+            <a href="project5.html">미성숙한 사랑</a>
         </nav>
     </div>
 
     <main>
-        <h1 class="page-title">Mobile Game</h1>
+        <h1 class="page-title">미성숙한 사랑 (Immature Love)</h1>
         <section class="game-detail">
             <div class="game-content">
                 <div class="game-media">
                     <div class="main-media">
-                        <img id="mainImage" src="../largefile/images/game screenshots/mobile/screenshot1.png" alt="Mobile Game Screenshot">
+                        <img id="mainImage" src="../largefile/images/game screenshots/love/love2.jpg" alt="미성숙한 사랑 메인 화면" onerror="this.style.background='linear-gradient(135deg, #ff6b9d 0%, #667eea 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='3rem'; this.style.fontWeight='bold'; this.innerHTML='💔💭';">
+                        <video id="mainVideo" style="display: none;" controls preload="none" playsinline>
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="media-fallback">
+                            게임을 직접 플레이해보세요!
+                        </div>
+                        
                     </div>
                     <div class="media-strip">
-                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot1.png', this)">
-                            <img src="../largefile/images/game screenshots/mobile/screenshot1.png" alt="Main Screenshot">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/love/love2.jpg', this)">
+                            <img src="../largefile/images/game screenshots/love/love2.jpg" alt="메인 화면" onerror="this.style.background='linear-gradient(135deg, #ff6b9d 0%, #667eea 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💔';">
                         </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot2.png', this)">
-                            <img src="../largefile/images/game screenshots/mobile/screenshot2.png" alt="Screenshot 1">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot3.png', this)">
-                            <img src="../largefile/images/game screenshots/mobile/screenshot3.png" alt="Screenshot 2">
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/love/love.jpg', this)">
+                            <img src="../largefile/images/game screenshots/love/love.jpg" alt="게임플레이" onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #ff6b9d 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💭';">
                         </div>
                     </div>
                 </div>
 
                 <div class="game-info-sidebar">
                     <div class="game-actions">
-                        <a href="#" class="play-button">Coming Soon</a>
+                        <a href="games-html/dating-sim.html" class="play-button">게임 플레이</a>
                     </div>
 
                     <div class="info-box">
                         <h3>Game Details</h3>
                         <div class="detail-item">
                             <span class="label">Status:</span>
-                            <span class="value">In Development</span>
+                            <span class="value">Completed</span>
                         </div>
                         <div class="detail-item">
-                            <span class="label">Platform:</span>
-                            <span class="value">Android, iOS</span>
+                            <span class="label">Development Period:</span>
+                            <span class="value">June, 2025</span>
                         </div>
                         <div class="detail-item">
                             <span class="label">Genre:</span>
-                            <span class="value">Casual, Puzzle</span>
+                            <span class="value">Visual Novel, Romance, Interactive Story</span>
                         </div>
                         <div class="detail-item">
                             <span class="label">Made with:</span>
-                            <span class="value">Unity</span>
+                            <span class="value">HTML, CSS, JavaScript</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Language:</span>
+                            <span class="value">Korean (한국어)</span>
                         </div>
                     </div>
 
                     <div class="team-box">
                         <h3>Development Team</h3>
                         <div class="team-member">
-                            <span class="role">Design:</span>
+                            <span class="role">Story Design:</span>
                             <span class="name">Ju-Young Kim (Alex)</span>
                         </div>
                         <div class="team-member">
@@ -97,7 +107,7 @@
                             <span class="name">Ju-Young Kim (Alex)</span>
                         </div>
                         <div class="team-member">
-                            <span class="role">Art:</span>
+                            <span class="role">UI/UX Design:</span>
                             <span class="name">Ju-Young Kim (Alex)</span>
                         </div>
                     </div>
@@ -105,24 +115,64 @@
 
                 <div class="game-description">
                     <h2>About This Game</h2>
-                    <p>A mobile puzzle game that challenges players with unique and engaging mechanics. Perfect for quick gaming sessions on the go!</p>
                     <p>
-                        독특하고 매력적인 메카닉으로 플레이어에게 도전을 제공하는 모바일 퍼즐 게임입니다. 이동 중에도 즐길 수 있는 간단한 게임 세션을 제공합니다!
+                        "미성숙한 사랑"은 현실적인 연애의 복잡함과 성장을 다룬 인터랙티브 스토리 게임입니다. 전 여자친구와의 관계에서 겪었던 신뢰 문제, 질투심, 그리고 개인적 성장의 여정을 그린 깊이 있는 미연시 게임입니다.
                     </p>
-
-                    <h2>Features</h2>
-                    <ul>
-                        <li>Simple yet challenging gameplay / 간단하지만 도전적인 게임플레이</li>
-                        <li>Beautiful minimalist design / 아름다운 미니멀리스트 디자인</li>
-                        <li>Progressive difficulty / 점진적인 난이도 상승</li>
-                        <li>No ads or in-app purchases / 광고나 인앱 결제 없음</li>
-                    </ul>
-
-                    <div class="development-status">
-                        <h2>Development Status</h2>
-                        <p>Currently in active development. The game will be available on both Android and iOS platforms.</p>
-                        <p>
-                            현재 개발 진행 중입니다. 안드로이드와 iOS 플랫폼 모두에서 출시될 예정입니다.
+                    <p>
+                        "Immature Love" is an interactive story game that explores the complexities of real relationships and personal growth. It depicts a deep journey through trust issues, jealousy, and personal development experienced in a relationship with an ex-girlfriend.
+                    </p>
+                    
+                    <div class="design-overview">
+                        <h2>Game Features</h2>
+                        <div style="color: white; margin-bottom: 15px;">
+                            <strong>🎭 현실적인 스토리</strong><br>
+                            • 실제 경험을 바탕으로 한 현실적인 연애 이야기<br>
+                            • 화내고 막말하는 부분까지 솔직하게 그린 미성숙함<br>
+                            • 능력 부족, 자신감 부족에서 오는 열등감과 질투심<br>
+                            • 연애할 준비가 안 된 상태에서의 관계 갈등
+                        </div>
+                        
+                        <div style="color: white; margin-bottom: 15px;">
+                            <strong>🎮 게임 시스템</strong><br>
+                            • 선택지에 따른 다양한 스토리 분기<br>
+                            • 지은(전여친) 신뢰도, 민수(전남친) 질투도, 자기 신뢰도 관리<br>
+                            • 23가지 서로 다른 엔딩<br>
+                            • 세이브/로드 기능 (3개 슬롯)
+                        </div>
+                        
+                        <div style="color: white; margin-bottom: 15px;">
+                            <strong>💔 주요 테마</strong><br>
+                            • 미성숙한 사랑에서 성숙한 사랑으로의 성장<br>
+                            • 신뢰 문제와 질투심 극복<br>
+                            • 자기 성찰과 개인적 성장<br>
+                            • 진정한 사과와 화해의 의미
+                        </div>
+                        
+                        <div style="color: white;">
+                            <strong>📱 기술적 특징</strong><br>
+                            • PC와 모바일 모두 지원하는 반응형 디자인<br>
+                            • 타이핑 애니메이션과 부드러운 UI 전환<br>
+                            • 로컬스토리지를 활용한 게임 진행 상황 저장<br>
+                            • 터치 이벤트 최적화로 모바일에서도 완벽한 조작감
+                        </div>
+                    </div>
+                    
+                    <div class="design-overview">
+                        <h2>Story Characters</h2>
+                        <div style="color: white;">
+                            <strong>👨 주인공</strong> - 미성숙하지만 성장하려는 의지를 가진 인물<br>
+                            <strong>👩 지은 (전여친)</strong> - 신뢰를 중시하는 현실적인 여성<br>
+                            <strong>👨 민수 (전남친)</strong> - 질투의 대상이 되는 지은의 친구
+                        </div>
+                    </div>
+                    
+                    <div class="design-overview">
+                        <h2>Development Notes</h2>
+                        <p style="color: white;">
+                            이 게임은 실제 개인 경험을 바탕으로 제작되었습니다. 미화하지 않고 솔직하게 표현한 미성숙한 모습들과 그 과정에서의 성장을 통해, 플레이어가 자신의 관계를 돌아보고 더 건강한 사랑을 할 수 있는 통찰을 얻기를 바랍니다.
+                        </p>
+                        <p style="color: white;">
+                            This game was created based on real personal experiences. By honestly portraying immature behaviors without glorification and the growth process, we hope players can reflect on their own relationships and gain insights for healthier love.
                         </p>
                     </div>
                 </div>
@@ -130,9 +180,112 @@
         </section>
     </main>
 
+    <style>
+    .game-media {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .main-media {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: linear-gradient(135deg, #ff6b9d 0%, #667eea 100%);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    #mainImage,
+    #mainVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: transparent;
+    }
+    
+    #mainImage.hidden {
+        display: none !important;
+    }
+    
+    .media-strip {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .thumbnail {
+        width: 100px;
+        height: 60px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #ff6b9d 0%, #667eea 100%);
+    }
+    
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .thumbnail.active {
+        border-color: #ff6b9d;
+        box-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+    }
+
+    .media-fallback {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        z-index: 3;
+    }
+
+    .design-overview {
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(255, 107, 157, 0.1);
+        border-radius: 10px;
+        border-left: 4px solid #ff6b9d;
+    }
+
+    .design-overview h2 {
+        color: #ff6b9d;
+        margin-bottom: 15px;
+    }
+    </style>
+    
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainVideo = document.getElementById('mainVideo');
+        mainVideo.addEventListener('error', function(e) {
+            console.error('비디오 로드 에러:', e.target.error);
+        });
+    });
+
     function changeImage(src, thumbnail) {
-        document.getElementById('mainImage').src = src;
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        mainImage.classList.remove('hidden');
+        mainVideo.style.display = 'none';
+        mainVideo.pause();
+        mainVideo.src = '';
+        mainVideo.load();
+        mainImage.src = src;
+        updateThumbnailActive(thumbnail);
+    }
+
+    function updateThumbnailActive(thumbnail) {
         document.querySelectorAll('.thumbnail').forEach(thumb => {
             thumb.classList.remove('active');
         });
