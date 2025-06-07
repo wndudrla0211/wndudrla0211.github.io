@@ -186,12 +186,12 @@ const storyData = {
     
     wantToApologize: [
         {
-            speaker: "지은",
-            text: "사과...? 네가 그때 한 행동들, 말들 기억해? '왜 민수랑 계속 연락해?', '나보다 그가 좋은 거 아냐?'... 정말 힘들었어.",
-            character: "jieun",
+            speaker: "주인공",
+            text: "지은에게 진심으로 사과하고 싶어. 내가 화내고 막말했던 것, 의심했던 것... 모든 걸 사과하고 싶어.",
+            character: "neutral",
             choices: [
-                { text: "'정말 미안해. 나 정말 잘못했어'", next: "sincereApology", effect: { jieun: +15, minsu: -10 } },
-                { text: "'그때는 정말 불안했어...'", next: "explainAnxiety", effect: { minsu: +5 } }
+                { text: "용기를 내어 연락한다", next: "contactJieun" },
+                { text: "아직 용기가 안 난다", next: "hesitation", effect: { confidence: -3 } }
             ]
         }
     ],
@@ -529,11 +529,47 @@ const storyData = {
     selfReflection: [
         {
             speaker: "주인공",
-            text: "어릴 때부터 나는 항상 부족하다는 느낌을 받았어. 그게 연애에서도 나타난 거였구나.",
+            text: "왜 나는 그렇게 질투했을까? 왜 믿지 못했을까? 근본적인 원인은 내 자존감 부족이었어. 이걸 해결해야 해.",
             character: "neutral",
             choices: [
-                { text: "이제는 그 패턴을 바꿔보자", next: "breakPattern", effect: { confidence: +10 } },
-                { text: "전문가의 도움을 받아보자", next: "seekHelp" }
+                { text: "자존감을 키우는 데 집중한다", next: "buildSelfWorth", effect: { confidence: +15 } },
+                { text: "내 한계를 받아들인다", next: "acceptMyself", effect: { confidence: +5 } }
+            ]
+        }
+    ],
+    
+    buildSelfWorth: [
+        {
+            speaker: "주인공",
+            text: "나도 가치 있는 사람이야. 나만의 장점도 있고, 나만의 매력도 있어. 더 이상 다른 사람과 비교하거나 열등감을 느낄 필요 없어.",
+            character: "neutral",
+            choices: [
+                { text: "자신있게 세상을 마주할 준비가 됐다", next: "newConfidence", effect: { confidence: +20, minsu: -20 } },
+                { text: "이제 누군가를 제대로 사랑할 수 있다", next: "readyForLove", effect: { confidence: +10, jieun: +10 } }
+            ]
+        }
+    ],
+    
+    newConfidence: [
+        {
+            speaker: "주인공",
+            text: "완전히 달라진 기분이야. 내 자신에게 자신감이 생겼고, 다른 사람도 믿을 수 있을 것 같아. 이게 진짜 나야.",
+            character: "neutral",
+            choices: [
+                { text: "새로운 연애를 시작한다", next: "newRelationship" },
+                { text: "지은에게 한 번 더 연락해본다", next: "finalContact", effect: { jieun: +15 } }
+            ]
+        }
+    ],
+    
+    readyForLove: [
+        {
+            speaker: "주인공",
+            text: "이제 진정한 사랑이 무엇인지 알 것 같아. 누군가를 소유하는 게 아니라, 믿고 존중하는 거야. 이런 마음으로 지은에게 사과하고 싶어.",
+            character: "neutral",
+            choices: [
+                { text: "지은에게 연락한다", next: "contactJieun" },
+                { text: "조금 더 기다린다", next: "waitMore", effect: { confidence: +3 } }
             ]
         }
     ],
@@ -541,10 +577,11 @@ const storyData = {
     breakPattern: [
         {
             speaker: "주인공",
-            text: "어릴 때부터의 패턴을 바꿔보자. 부족하다고 느끼는 마음, 불안해하는 마음... 이제는 달라질 수 있어.",
+            text: "옛날 패턴을 완전히 끊어야 해. 더 이상 질투하지 않고, 화내지 않고, 남을 탓하지 않겠어. 모든 책임은 내가 진다.",
             character: "neutral",
             choices: [
-                { text: "새로운 나로 거듭난다", next: "newSelf" }
+                { text: "완전히 새로운 사람으로 살아간다", next: "newSelf", effect: { confidence: +18, minsu: -15 } },
+                { text: "이런 변화를 지은과의 관계에 적용한다", next: "applyToJieun", effect: { jieun: +12 } }
             ]
         }
     ],
@@ -552,89 +589,131 @@ const storyData = {
     newSelf: [
         {
             speaker: "주인공",
-            text: "완전히 새로운 사람이 된 기분이야. 자신감도 생기고, 화도 덜 내게 되고... 이제 건강한 사랑을 할 수 있을 것 같아.",
+            text: "이제 나는 새로운 사람이야. 제대로 사랑할 줄 알고, 제대로 믿을 줄 알고, 내 감정에 책임질 줄 아는 사람. 이런 변화가 자랑스러워.",
             character: "neutral",
             choices: [
-                { text: "새로운 사랑을 시작할 준비가 됐다", next: "readyForNewLove" },
-                { text: "지은에게 변화된 모습을 보여주고 싶다", next: "showChange" }
+                { text: "이것이 진정한 성장이다", next: "trueGrowth" },
+                { text: "이런 성장을 지은과 나누고 싶다", next: "shareGrowth", effect: { jieun: +10 } }
             ]
         }
     ],
     
-    neverAgain: [
+    seekHelp: [
         {
             speaker: "주인공",
-            text: "다시는 그런 실수를 하지 않겠어. 화내고, 의심하고, 상처주는 말을 하는... 그런 미성숙한 모습은 이제 그만.",
+            text: "혼자서는 한계가 있다는 것을 인정하고 전문가의 도움을 받기로 한 당신. 이런 용기가 진정한 변화의 시작입니다.",
             character: "neutral",
             choices: [
-                { text: "새로운 사람이 되겠다", next: "newBeginning" }
+                { text: "체계적인 치료를 받는다", next: "systematicTreatment" },
+                { text: "친구들의 조언을 구한다", next: "askFriends" }
             ]
         }
     ],
     
-    timeHeals: [
+    canGrow: [
         {
-            speaker: "지은",
-            text: "시간이 지나면... 모르겠어. 지금은 아직 상처가 아물지 않았거든. 하지만 네가 진짜 변했다면...",
+            speaker: "주인공",
+            text: "한계가 있지만 성장할 수 있다고 믿어. 완벽하지 않아도 괜찮아. 조금씩이라도 나아지면 되는 거야.",
+            character: "neutral",
+            choices: [
+                { text: "천천히 꾸준히 성장한다", next: "gradualGrowth" },
+                { text: "성장의 의지를 다진다", next: "growthDetermination" }
+            ]
+        }
+    ],
+    
+    betterAlone: [
+        {
+            speaker: "주인공",
+            text: "혼자 있는 게 더 나을 것 같아. 아직 누군가와 함께할 준비가 안 됐어. 먼저 나 자신과 평화롭게 지내보자.",
+            character: "neutral",
+            choices: [
+                { text: "혼자만의 평화를 찾는다", next: "findInnerPeace" },
+                { text: "언젠가는 다시 시도해볼 것이다", next: "maybeOneDay" }
+            ]
+        }
+    ],
+    
+    canChange: [
+        {
+            speaker: "주인공",
+            text: "서로 다르지만 변할 수 있다고 믿어. 성격이 다르다고 해서 포기할 필요는 없어. 노력하면 맞춰갈 수 있을 거야.",
+            character: "neutral",
+            choices: [
+                { text: "변화를 위해 노력한다", next: "effortToChange" },
+                { text: "지은에게 이런 마음을 전한다", next: "tellJieun" }
+            ]
+        }
+    ],
+    
+    personalityDifference: [
+        {
+            speaker: "주인공",
+            text: "어쩔 수 없는 성격 차이인 것 같아. 지은은 자유롭고 사교적이고, 나는... 조심스럽고 내성적이고. 억지로 맞출 필요는 없을지도.",
+            character: "neutral",
+            choices: [
+                { text: "차이를 인정하고 받아들인다", next: "acceptDifference" },
+                { text: "그래도 노력해볼 만하다", next: "worthTrying" }
+            ]
+        }
+    ],
+    
+    supportive: [
+        {
+            speaker: "주인공",
+            text: "정말 좋아 보여. 새로운 취미도 생기고, 친구들과도 잘 지내고... 그게 다행이야. 나 때문에 힘들었을 텐데.",
             character: "jieun",
             choices: [
-                { text: "'얼마든지 기다릴게'", next: "willWait" },
-                { text: "'변화를 계속 보여줄게'", next: "showProgress" }
+                { text: "진심으로 응원한다", next: "genuineSupport" },
+                { text: "미안함을 표현한다", next: "expressRegret" }
             ]
         }
     ],
     
-    mustApologize: [
+    askAboutMinsu: [
+        {
+            speaker: "지은",
+            text: "...아직도 그런 걸 신경 쓰는구나. 민수는 그냥 친구야. 예전부터 그랬고 지금도 그래. 넌 정말 변하지 않았네.",
+            character: "jieun",
+            choices: [
+                { text: "'미안해, 습관적으로 물어봤어'", next: "habitualQuestion" },
+                { text: "'그냥 궁금해서...'", next: "justCurious" }
+            ]
+        }
+    ],
+    
+    willWait: [
+        {
+            speaker: "지은",
+            text: "정말 기다릴 거야? 얼마나 걸릴지 모르는데... 아니, 아예 불가능할 수도 있어. 그래도?",
+            character: "jieun",
+            choices: [
+                { text: "'얼마든지 기다릴게'", next: "infiniteWait" },
+                { text: "'결과는 중요하지 않아'", next: "resultNotImportant" }
+            ]
+        }
+    ],
+    
+    apologizeAgain: [
+        {
+            speaker: "지은",
+            text: "또 실수했네... 정말 변한 게 맞아? 말로만 사과하고 행동은 그대로인 것 같은데.",
+            character: "jieun",
+            choices: [
+                { text: "'정말 죄송해요. 더 노력할게요'", next: "moreEffort" },
+                { text: "'시간이 더 필요한 것 같아'", next: "needMoreTime" }
+            ]
+        }
+    ],
+    
+    selfDisgust: [
         {
             speaker: "주인공",
-            text: "돌이킬 수 없는 상처를 줬지만, 그래도 사과는 해야 해. 지은이 받아주든 안 받아주든...",
+            text: "정말 한심해... 나 자신이 너무 싫어. 이런 식으로 살면서 누굴 사랑한다고 했을까.",
             character: "neutral",
             choices: [
-                { text: "진심으로 사과한다", next: "sincereApology2" }
-            ]
-        }
-    ],
-    
-    sincereApology2: [
-        {
-            speaker: "내레이션",
-            text: "당신은 지은에게 진심으로 사과했습니다. 모든 잘못을 인정하고, 상처 준 것을 진심으로 미안해했습니다.",
-            character: "neutral",
-            choices: [
-                { text: "이제 각자의 길을 간다", next: "separateWays" }
-            ]
-        }
-    ],
-    
-    loneReflection: [
-        {
-            speaker: "주인공",
-            text: "혼자서 조용히 반성하며 지내자. 내가 무엇을 잘못했는지, 왜 그렇게 됐는지... 충분히 생각해보는 시간이 필요해.",
-            character: "neutral",
-            choices: [
-                { text: "깊은 성찰의 시간을 갖는다", next: "deepReflection" }
-            ]
-        }
-    ],
-    
-    deepReflection: [
-        {
-            speaker: "내레이션",
-            text: "당신은 혼자만의 시간을 통해 많은 것을 깨달았습니다. 미성숙했던 과거와 앞으로 나아갈 방향을...",
-            character: "neutral",
-            choices: [
-                { text: "성장의 여정을 시작한다", next: "growthJourney" }
-            ]
-        }
-    ],
-    
-    growthJourney: [
-        {
-            speaker: "내레이션",
-            text: "당신의 성장 여정이 시작되었습니다. 더 이상 미성숙한 사랑이 아닌, 진정한 사랑을 할 수 있는 사람이 되기 위해...",
-            character: "neutral",
-            choices: [
-                { text: "새로운 시작을 맞이한다", next: "matureEnding" }
+                { text: "자기혐오를 극복해보자", next: "overcomeSelfHate" },
+                { text: "이것도 성장의 과정이다", next: "partOfGrowth" }
             ]
         }
     ]
@@ -642,7 +721,6 @@ const storyData = {
 
 // 엔딩 데이터
 const endings = {
-    // 기존 엔딩들
     goodEnding: {
         title: "신뢰의 시작",
         text: "당신과 지은은 서로의 마음을 이해하고 다시 시작했습니다. 이제 진정한 신뢰를 바탕으로 한 사랑을 키워나갈 수 있을 것입니다."

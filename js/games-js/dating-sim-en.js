@@ -460,26 +460,214 @@ const storyData = {
         }
     ],
     
-    neverAgain: [
+    irreversibleHurt: [
         {
             speaker: "Protagonist",
-            text: "I'll never make the same mistake again. I'll never hurt someone I care about with jealousy and suspicion again.",
+            text: "I caused irreversible damage. The things I said back then, my actions... Yelling 'This is happening because you act that way'...",
             character: "neutral",
             choices: [
-                { text: "This is my firm resolution", next: "firmResolution", effect: { confidence: +15, minsu: -20 } },
-                { text: "I want to keep this promise to Jieun", next: "promiseToJieun", effect: { jieun: +15 } }
+                { text: "But I still need to apologize", next: "mustApologize", effect: { jieun: +5 } },
+                { text: "I was so pathetic", next: "selfDisgust", effect: { confidence: -8 } }
             ]
         }
     ],
     
-    timeHeals: [
+    // Additional missing story scenes
+    dontGiveUp: [
         {
             speaker: "Protagonist",
-            text: "Time has passed, and I've healed a lot. I think I can face my past mistakes calmly now.",
+            text: "But I won't give up. Even though I'm lacking now, I can change through effort. I'll become someone qualified for relationships.",
             character: "neutral",
             choices: [
-                { text: "Contact Jieun after organizing my thoughts", next: "organizedThoughts", effect: { confidence: +10 } },
-                { text: "Some wounds take more time", next: "moreTimeNeeded", effect: { confidence: +5 } }
+                { text: "Resolve to make a new beginning", next: "newBeginning" }
+            ]
+        }
+    ],
+    
+    feelInsufficient: [
+        {
+            speaker: "Protagonist",
+            text: "I guess I really wasn't enough... Jieun was too good a person, and I was... just lacking.",
+            character: "neutral",
+            choices: [
+                { text: "Accept it and decide to live alone", next: "acceptAlone" }
+            ]
+        }
+    ],
+    
+    communicationIssue: [
+        {
+            speaker: "Protagonist",
+            text: "Now I should communicate properly. Express my anxiety honestly instead of through anger...",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun to request a conversation", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    myFaultToo: [
+        {
+            speaker: "Protagonist",
+            text: "But that's also my fault. I should have said 'I'm anxious right now, please help me' instead of getting angry.",
+            character: "neutral",
+            choices: [
+                { text: "Communicate properly next time", next: "communicationIssue" }
+            ]
+        }
+    ],
+    
+    changeThenContact: [
+        {
+            speaker: "Protagonist",
+            text: "Let me change first, then contact her. When I can confidently say I've become a different person...",
+            character: "neutral",
+            choices: [
+                { text: "Continue systematic self-improvement", next: "systematicImprovement" }
+            ]
+        }
+    ],
+    
+    selfFirst: [
+        {
+            speaker: "Protagonist",
+            text: "Right, myself first. I need to become someone I can respect before thinking about others.",
+            character: "neutral",
+            choices: [
+                { text: "Focus completely on self-improvement", next: "moreImprovement" }
+            ]
+        }
+    ],
+    
+    readyToContact: [
+        {
+            speaker: "Protagonist",
+            text: "Maybe it's time to contact Jieun. Not with expectations, but just to apologize sincerely.",
+            character: "neutral",
+            choices: [
+                { text: "Send her a message", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    enoughChange: [
+        {
+            speaker: "Protagonist",
+            text: "Maybe I've changed enough. I've learned to control my emotions and trust others. It's time to take action.",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    acceptMyself: [
+        {
+            speaker: "Protagonist",
+            text: "I've learned to accept myself as I am. I'm not perfect, but that's okay. With this self-acceptance, I can build healthier relationships.",
+            character: "neutral",
+            choices: [
+                { text: "I'm ready for new relationships", next: "newRelationship" },
+                { text: "Contact Jieun with this acceptance", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    waitMore: [
+        {
+            speaker: "Protagonist",
+            text: "Let me wait a little longer. I want to be more certain of my change before meeting her.",
+            character: "neutral",
+            choices: [
+                { text: "Continue self-reflection", next: "selfReflection" }
+            ]
+        }
+    ],
+    
+    applyToJieun: [
+        {
+            speaker: "Protagonist",
+            text: "I want to apply this change to my relationship with Jieun. Show her that I've really become a different person.",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    thinkMore: [
+        {
+            speaker: "Protagonist",
+            text: "Let me think a little more. This is an important decision that could affect both our lives.",
+            character: "neutral",
+            choices: [
+                { text: "After careful consideration, contact her", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    tryToExplain: [
+        {
+            speaker: "Jieun",
+            text: "I don't want to hear excuses anymore. I'm tired. Please don't contact me again.",
+            character: "jieun",
+            choices: [
+                { text: "Accept her decision", next: "acceptDecision" }
+            ]
+        }
+    ],
+    
+    finalApology: [
+        {
+            speaker: "Jieun",
+            text: "...At least you acknowledged it. Maybe that's something. But it's still too late.",
+            character: "jieun",
+            choices: [
+                { text: "Accept that it's too late", next: "tooLate" }
+            ]
+        }
+    ],
+    
+    prepareWell: [
+        {
+            speaker: "Protagonist",
+            text: "I'll prepare sincerely for the meeting. I'll organize my thoughts and show her my genuine change.",
+            character: "neutral",
+            choices: [
+                { text: "Meet and have an honest conversation", next: "honestConversation" }
+            ]
+        }
+    ],
+    
+    simpleApology: [
+        {
+            speaker: "Protagonist",
+            text: "I'll just apologize simply and sincerely. Without any expectations or excuses.",
+            character: "neutral",
+            choices: [
+                { text: "Apologize with all my heart", next: "heartfeltApology" }
+            ]
+        }
+    ],
+    
+    proveWithActions: [
+        {
+            speaker: "Protagonist",
+            text: "You're right. I'll prove it with actions, not words. I'll show you through my behavior that I've really changed.",
+            character: "neutral",
+            choices: [
+                { text: "Start proving through actions", next: "actionProof" }
+            ]
+        }
+    ],
+    
+    understandCaution: [
+        {
+            speaker: "Protagonist",
+            text: "I understand your caution. I've disappointed you so many times. Take all the time you need.",
+            character: "neutral",
+            choices: [
+                { text: "Wait patiently", next: "patientWaiting" }
             ]
         }
     ],
@@ -496,14 +684,295 @@ const storyData = {
         }
     ],
     
-    sincereApology2: [
+    selfDisgust: [
         {
             speaker: "Protagonist",
-            text: "Jieun, I was really wrong. I hurt you with my immaturity, jealousy, and selfishness. I sincerely apologize.",
+            text: "I'm so pathetic... I hate myself. How could I live like this and claim to love someone?",
+            character: "neutral",
+            choices: [
+                { text: "Try to overcome self-hatred", next: "overcomeSelfHate" },
+                { text: "This is also part of growth", next: "partOfGrowth" }
+            ]
+        }
+    ],
+    
+    casualContact: [
+        {
+            speaker: "Jieun",
+            text: "Just checking on me... I see. I'm doing well. I have new hobbies and getting along well with friends.",
             character: "jieun",
             choices: [
-                { text: "I won't make excuses", next: "noExcuses", effect: { jieun: +12 } },
-                { text: "I've learned what real love is", next: "learnedLove", effect: { jieun: +10, confidence: +8 } }
+                { text: "'You look happy'", next: "supportive" },
+                { text: "'Is Minsu among those friends?'", next: "askAboutMinsu", effect: { minsu: +10, jieun: -8 } }
+            ]
+        }
+    ],
+    
+    grateful: [
+        {
+            speaker: "Jieun",
+            text: "Okay... I can see you're genuinely reflecting. Let's meet and talk. But don't expect things to go back to how they were.",
+            character: "jieun",
+            choices: [
+                { text: "'I know, I just want to apologize'", next: "justApology" },
+                { text: "'Will it get better with time?'", next: "timeHeals", effect: { jieun: +3 } }
+            ]
+        }
+    ],
+    
+    justApology: [
+        {
+            speaker: "Narrator",
+            text: "You met with Jieun and sincerely apologized. You couldn't go back to how things were, but you were able to resolve the painful issues between you.",
+            character: "neutral",
+            choices: [
+                { text: "Now we go our separate ways", next: "separateWays" }
+            ]
+        }
+    ],
+    
+    supportive: [
+        {
+            speaker: "Jieun",
+            text: "Thank you for saying that. It's nice to hear genuine support from you. Maybe you have changed a little.",
+            character: "jieun",
+            choices: [
+                { text: "Continue the warm conversation", next: "warmConversation" }
+            ]
+        }
+    ],
+    
+    askAboutMinsu: [
+        {
+            speaker: "Jieun",
+            text: "...You're still worried about that. Minsu is just a friend. Always has been, still is. You really haven't changed.",
+            character: "jieun",
+            choices: [
+                { text: "'Sorry, I asked out of habit'", next: "habitualQuestion" },
+                { text: "'I was just curious...'", next: "justCurious" }
+            ]
+        }
+    ],
+    
+    timeHeals: [
+        {
+            speaker: "Jieun",
+            text: "Time... maybe. But there are some things that can't be undone. Let's just focus on having a good conversation today.",
+            character: "jieun",
+            choices: [
+                { text: "Have an honest conversation", next: "honestConversation" }
+            ]
+        }
+    ],
+    
+    // More story scenes to match Korean version...
+    noExcuse: [
+        {
+            speaker: "Protagonist",
+            text: "But that's just an excuse. My difficult situation doesn't justify hurting Jieun or getting angry at her.",
+            character: "neutral",
+            choices: [
+                { text: "Sincerely reflect and apologize", next: "genuineRemorse" },
+                { text: "I'll never make that mistake again", next: "neverAgain", effect: { confidence: +10 } }
+            ]
+        }
+    ],
+    
+    incompatible: [
+        {
+            speaker: "Protagonist",
+            text: "Maybe we just weren't compatible. Jieun is free and social, and I'm... anxious and jealous.",
+            character: "neutral",
+            choices: [
+                { text: "But I believe I can change", next: "canChange", effect: { confidence: +5 } },
+                { text: "It was an unavoidable personality difference", next: "personalityDifference" }
+            ]
+        }
+    ],
+    
+    consistentEffort: [
+        {
+            speaker: "Protagonist",
+            text: "I changed through consistent effort. I get less angry, gained confidence through exercise... Most importantly, I learned how to trust others.",
+            character: "neutral",
+            choices: [
+                { text: "Now I'm ready to start a new love", next: "readyForNewLove" },
+                { text: "I want to show Jieun how I've changed", next: "showChange" }
+            ]
+        }
+    ],
+    
+    overcomeFear: [
+        {
+            speaker: "Protagonist",
+            text: "Let me overcome that fear. The feeling of not being enough, the anxiety of being abandoned... I won't let these control me anymore.",
+            character: "neutral",
+            choices: [
+                { text: "Systematically build confidence", next: "buildConfidence" },
+                { text: "Seek professional help", next: "seekHelp" }
+            ]
+        }
+    ],
+    
+    acceptLimitation: [
+        {
+            speaker: "Protagonist",
+            text: "I guess that's just my limit... I wasn't ready for relationships from the beginning. I lacked abilities, confidence, and maturity.",
+            character: "neutral",
+            choices: [
+                { text: "But I can still grow", next: "canGrow", effect: { confidence: +3 } },
+                { text: "It's better to be alone", next: "betterAlone", effect: { confidence: -8 } }
+            ]
+        }
+    ],
+    
+    ownProblem: [
+        {
+            speaker: "Protagonist",
+            text: "In the end, it was my problem. I couldn't control my anger, said harsh words, was suspicious... Jieun was just trying to live normally with friends.",
+            character: "neutral",
+            choices: [
+                { text: "Let me change now", next: "changeNow", effect: { confidence: +8, jieun: +5 } },
+                { text: "I think it's too late", next: "tooLate", effect: { confidence: -5 } }
+            ]
+        }
+    ],
+    
+    canChange: [
+        {
+            speaker: "Protagonist",
+            text: "We're different, but I believe we can change. Just because we have different personalities doesn't mean we should give up. We can work to understand each other.",
+            character: "neutral",
+            choices: [
+                { text: "Make an effort to change", next: "effortToChange" },
+                { text: "Tell Jieun about these feelings", next: "tellJieun" }
+            ]
+        }
+    ],
+    
+    personalityDifference: [
+        {
+            speaker: "Protagonist",
+            text: "It seems like an unavoidable personality difference. Jieun is free and social, and I'm... careful and introverted. Maybe we don't need to force compatibility.",
+            character: "neutral",
+            choices: [
+                { text: "Accept and acknowledge the difference", next: "acceptDifference" },
+                { text: "But it's still worth trying", next: "worthTrying" }
+            ]
+        }
+    ],
+    
+    neverAgain: [
+        {
+            speaker: "Protagonist",
+            text: "I'll never make the same mistake again. I'll never hurt someone I care about with jealousy and suspicion again.",
+            character: "neutral",
+            choices: [
+                { text: "This is my firm resolution", next: "firmResolution", effect: { confidence: +15, minsu: -20 } },
+                { text: "I want to keep this promise to Jieun", next: "promiseToJieun", effect: { jieun: +15 } }
+            ]
+        }
+    ],
+    
+    changeNow: [
+        {
+            speaker: "Protagonist",
+            text: "Let me change now. Learn to control anger, learn to think from others' perspectives... It's late, but I'll start.",
+            character: "neutral",
+            choices: [
+                { text: "Start systematic self-development", next: "systematicImprovement" }
+            ]
+        }
+    ],
+    
+    canGrow: [
+        {
+            speaker: "Protagonist",
+            text: "I have limitations, but I believe I can grow. I don't have to be perfect. I just need to keep getting better, little by little.",
+            character: "neutral",
+            choices: [
+                { text: "Grow slowly and steadily", next: "gradualGrowth" },
+                { text: "Strengthen my will to grow", next: "growthDetermination" }
+            ]
+        }
+    ],
+    
+    betterAlone: [
+        {
+            speaker: "Protagonist",
+            text: "It might be better to be alone. I'm not ready to be with someone yet. Let me first learn to be at peace with myself.",
+            character: "neutral",
+            choices: [
+                { text: "Find peace within myself", next: "findInnerPeace" },
+                { text: "Maybe I'll try again someday", next: "maybeOneDay" }
+            ]
+        }
+    ],
+    
+    effortToChange: [
+        {
+            speaker: "Protagonist",
+            text: "I'll make an effort to change. Even though we're different, I'll try to understand and accommodate.",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun to express these feelings", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    tellJieun: [
+        {
+            speaker: "Protagonist",
+            text: "I want to tell Jieun about these feelings. That I've realized our differences, but I still want to try.",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    acceptDifference: [
+        {
+            speaker: "Protagonist",
+            text: "I'll accept and acknowledge our differences. We don't have to be the same. Respecting differences is also a form of love.",
+            character: "neutral",
+            choices: [
+                { text: "Learn to respect differences", next: "learnRespect" }
+            ]
+        }
+    ],
+    
+    worthTrying: [
+        {
+            speaker: "Protagonist",
+            text: "But it's still worth trying. If we really care about each other, we can overcome personality differences.",
+            character: "neutral",
+            choices: [
+                { text: "Contact Jieun to discuss this", next: "contactJieun" }
+            ]
+        }
+    ],
+    
+    // Additional endings for consistency
+    seekHelp: [
+        {
+            speaker: "Protagonist",
+            text: "I admit I have limitations on my own and decided to seek professional help. This courage is the real beginning of change.",
+            character: "neutral",
+            choices: [
+                { text: "Receive systematic treatment", next: "systematicTreatment" },
+                { text: "Ask friends for advice", next: "askFriends" }
+            ]
+        }
+    ],
+    
+    readyForNewLove: [
+        {
+            speaker: "Protagonist",
+            text: "Through consistent effort, you're now ready to start a new love. This time you can create a healthier relationship.",
+            character: "neutral",
+            choices: [
+                { text: "Start a new relationship", next: "newRelationship" }
             ]
         }
     ],
@@ -511,10 +980,10 @@ const storyData = {
     loneReflection: [
         {
             speaker: "Protagonist",
-            text: "Maybe it's better to spend time alone reflecting. I need to fully understand myself before involving others.",
+            text: "I decided to spend time quietly reflecting alone. Sometimes solitary time enables the deepest introspection.",
             character: "neutral",
             choices: [
-                { text: "Continue deep self-reflection", next: "deepReflection", effect: { confidence: +10 } },
+                { text: "Continue deep reflection", next: "deepReflection", effect: { confidence: +10 } },
                 { text: "I've reflected enough", next: "enoughReflection", effect: { confidence: +5 } }
             ]
         }
@@ -532,139 +1001,152 @@ const storyData = {
         }
     ],
     
-    growthJourney: [
+    habitualQuestion: [
         {
-            speaker: "Protagonist",
-            text: "This has been a journey of growth. I'm grateful for all the experiences, even the painful ones.",
-            character: "neutral",
+            speaker: "Jieun",
+            text: "Out of habit... I see. Some habits are really hard to break. But at least you recognized it.",
+            character: "jieun",
             choices: [
-                { text: "I'm ready for new relationships", next: "readyForNew" },
-                { text: "I want to share this growth with Jieun", next: "shareWithJieun", effect: { jieun: +10 } }
+                { text: "I'm still working on changing", next: "stillChanging" }
+            ]
+        }
+    ],
+    
+    justCurious: [
+        {
+            speaker: "Jieun",
+            text: "Just curious... Sure. But that curiosity was what caused problems before. I think that's enough for today.",
+            character: "jieun",
+            choices: [
+                { text: "Accept the end of conversation", next: "acceptEnd" }
+            ]
+        }
+    ],
+    
+    genuineSupport: [
+        {
+            speaker: "Jieun",
+            text: "Thank you for saying that. It's nice to hear genuine support from you. Maybe you have changed a little.",
+            character: "jieun",
+            choices: [
+                { text: "Continue the warm conversation", next: "warmConversation" }
+            ]
+        }
+    ],
+    
+    expressRegret: [
+        {
+            speaker: "Jieun",
+            text: "I appreciate your regret. But what's more important is not repeating the same mistakes in the future.",
+            character: "jieun",
+            choices: [
+                { text: "Promise not to repeat mistakes", next: "promiseNoRepeat" }
             ]
         }
     ]
 };
 
-// Endings Data
+// Endings Data - Exactly matching Korean version (25 endings)
 const endings = {
-    // Happy Endings
+    goodEnding: {
+        title: "Trust Begins",
+        text: "You and Jieun understood each other's hearts and started over. Now you can nurture love based on true trust."
+    },
     happyEnding: {
-        title: "True Love",
-        text: "You and Jieun met again after a long time. Through sincere apologies and genuine change, you learned what real love is. You decided to start over, this time as mature adults. This time, you trust each other and respect each other. This is what true love looks like."
+        title: "Growth and Love",
+        text: "After learning to love yourself, you built an even healthier relationship with Jieun. You found true love with trust and understanding instead of jealousy and insecurity."
     },
-    
-    reconciliation: {
-        title: "Reconciliation",
-        text: "Jieun accepted your sincere apology. Although you didn't get back together, you became friends who understand each other. You learned that sometimes love means letting go and respecting the other person's choice."
-    },
-    
-    friendship: {
+    friendsEnding: {
         title: "Precious Friendship", 
-        text: "You and Jieun are friends now. You apologized for your past mistakes, and she forgave you. Although romance is no longer possible, you built a mature friendship. Sometimes this is more valuable than love."
+        text: "You couldn't return as lovers, but you and Jieun decided to remain good friends after understanding each other. Sometimes this is also a beautiful ending."
     },
-    
-    growth: {
-        title: "Personal Growth",
-        text: "Through this experience, you grew tremendously. You learned to control your emotions, trust others, and love yourself. Whether or not you reunite with Jieun, you've become someone worthy of love."
+    badEnding: {
+        title: "Painful Farewell",
+        text: "Jieun was disappointed to see that you ultimately couldn't change. But through this experience, you might be able to show a more mature side next time."
     },
-    
+    growthEnding: {
+        title: "I'm Fine Alone",
+        text: "Through time alone, you made peace with yourself. Now you can create healthier relationships even if you meet someone."
+    },
     newBeginning: {
         title: "New Beginning",
-        text: "You decided to start anew. After fully understanding your past mistakes and changing, you're ready for new relationships. The growth you've achieved will help you love someone properly."
+        text: "You resolved to make a new start with a mature mindset. Now you can build any relationship in a healthy way."
     },
-    
-    // Neutral Endings
-    understanding: {
-        title: "Mutual Understanding",
-        text: "You and Jieun talked about the past and came to understand each other. You both acknowledged your respective faults and forgave each other. This conversation became closure for both of you."
+    acceptAlone: {
+        title: "Peace in Solitude",
+        text: "You decided that being alone is more comfortable. Sometimes time with yourself can be the most precious."
     },
-    
-    closure: {
-        title: "Closure",
-        text: "Through conversations with Jieun, you achieved closure about the past. You can now move forward without regrets. Sometimes ending clearly is also a form of love."
+    separateWays: {
+        title: "Separate Paths",
+        text: "You sincerely apologized and Jieun accepted it. You're going different ways, but you could leave it as a good memory."
     },
-    
-    respectfulDistance: {
-        title: "Respectful Distance",
-        text: "You and Jieun decided to maintain a respectful distance. You acknowledged each other's growth but chose different paths. This is also a mature choice."
+    willWait: {
+        title: "Love of Waiting",
+        text: "Jieun began to open her heart little by little to your determination to wait however long it takes. It will take time, but there's possibility."
     },
-    
-    selfAcceptance: {
-        title: "Self-Acceptance",
-        text: "You learned to accept yourself as you are. You can't be perfect, but that's okay. With this self-acceptance, you're ready to build healthier relationships."
+    showChange: {
+        title: "Proof of Change",
+        text: "You decided to prove your change through actions. With actions rather than words, you will demonstrate your true growth to Jieun."
     },
-    
-    innerPeace: {
-        title: "Inner Peace",
-        text: "You found inner peace. You no longer blame yourself or others for the past. You're grateful for all experiences and ready for the future."
+    apologizeAgain: {
+        title: "Another Mistake",
+        text: "Seeing you make another mistake, Jieun was convinced. You haven't changed yet. But if you don't give up, someday..."
     },
-    
-    // Sad Endings
-    noResponse: {
-        title: "No Response",
-        text: "Jieun didn't respond to your message. You realized that some relationships are truly over. You decided to respect her choice and work on your own growth."
+    mustApologize: {
+        title: "Final Apology",
+        text: "Though you caused irreversible hurt, you thought you still needed to apologize. Your sincerity got through and Jieun understood a little."
     },
-    
-    rejection: {
-        title: "Rejection",
-        text: "Jieun clearly rejected your attempt to apologize. You realized that the hurt you caused was too deep. You decided to respect her decision and live with the consequences of your actions."
+    selfDisgust: {
+        title: "Self-Loathing",
+        text: "You're disappointed in your pathetic self. But even these feelings can be the beginning of growth. What's important is not giving up."
     },
-    
-    tooLate: {
-        title: "Too Late",
-        text: "You realized it was too late to fix things with Jieun. But this realization helped you understand the importance of treating the people you love well. You won't make the same mistake again."
+    timeHeals: {
+        title: "Time Heals",
+        text: "You and Jieun held hope that time would make things better. It hurts now, but someday it will become a good memory."
     },
-    
-    regret: {
-        title: "Deep Regret",
-        text: "You're left with deep regret about your relationship with Jieun. But through this regret, you learned what real love is. This painful lesson will make you a better person."
+    supportive: {
+        title: "Warm Encouragement",
+        text: "A warm conversation of mutual encouragement. Even if not lovers, you could remain as good people to each other."
     },
-    
-    acceptance: {
-        title: "Painful Acceptance",
-        text: "You accepted that you can't undo the past. You learned to live with the consequences of your actions. This acceptance is painful but necessary for growth."
+    askAboutMinsu: {
+        title: "Unchanged Jealousy",
+        text: "Jieun was disappointed to see you still asking about Minsu. Some things changed, but the core problem remained the same."
     },
-    
-    // Repetition/No Growth Endings
-    noChange: {
-        title: "No Change",
-        text: "You haven't really changed. You still blame others and make excuses. Until you truly reflect on yourself, you'll keep repeating the same mistakes."
+    loneReflection: {
+        title: "Solitary Reflection",
+        text: "You decided to reflect quietly alone. Sometimes solitary time enables the deepest introspection."
     },
-    
-    excuses: {
-        title: "Always Excuses",
-        text: "You kept making excuses instead of taking responsibility for your actions. True growth begins with honest self-reflection."
+    readyForNewLove: {
+        title: "Ready for New Love",
+        text: "Through consistent effort, you're now ready to start a new love. This time you can create a healthier relationship."
     },
-    
-    blame: {
-        title: "Blaming Others",
-        text: "You still blame Jieun and others. Until you take responsibility for your own emotions and actions, nothing will change."
+    seekHelp: {
+        title: "Courage to Seek Help",
+        text: "Admitting your limitations and deciding to seek professional help. This courage is the real beginning of change."
     },
-    
-    repetition: {
-        title: "Repeating Mistakes",
-        text: "You're repeating the same patterns of behavior. Jealousy, suspicion, anger - these haven't changed. You need to face yourself more honestly."
+    canGrow: {
+        title: "Possibility of Growth",
+        text: "You believe you can grow despite limitations. With this mindset, you can surely become a better person."
     },
-    
-    denial: {
-        title: "In Denial",
-        text: "You're denying your own problems and living in fantasy. Reality is painful, but facing it is the first step to growth."
+    betterAlone: {
+        title: "Better Alone",
+        text: "You thought being alone was better. Organizing your relationship with yourself first is also an important choice."
     },
-    
-    // Special Endings  
-    wisdom: {
-        title: "Gained Wisdom",
-        text: "Through this painful experience, you gained wisdom about love and relationships. You understand that love isn't about possession but about trust and respect. You'll use this wisdom to love better in the future."
+    canChange: {
+        title: "Will to Change",
+        text: "You believe you can change despite differences. This positive mindset is the first step to improving relationships."
     },
-    
-    maturity: {
-        title: "Emotional Maturity",
-        text: "You've achieved emotional maturity. You can now control your emotions, trust others, and love yourself. This maturity will be the foundation for all your future relationships."
+    personalityDifference: {
+        title: "Personality Differences",
+        text: "You acknowledged unavoidable personality differences. Sometimes accepting is also a wise choice."
     },
-    
-    newSelf: {
-        title: "A New Self",
-        text: "You've become a completely new person. The old you who was jealous and suspicious is gone. You're now someone who can love and trust. This transformation was painful but necessary."
+    neverAgain: {
+        title: "Never Again",
+        text: "You resolved never to make the same mistake again. This determination from genuine reflection will be the driving force for change."
+    },
+    matureEnding: {
+        title: "Toward Mature Love",
+        text: "Moving toward true maturity, leaving the immature past behind. Now you're truly ready for healthy love."
     }
 };
 
