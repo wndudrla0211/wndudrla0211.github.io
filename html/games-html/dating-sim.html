@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미성숙한 사랑 - 미연시 게임</title>
+    <title>미소녀 연애 시뮬레이션</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="stylesheet" href="../../css/comments.css">
     <link rel="stylesheet" href="../../css/games-css/dating-sim.css">
 </head>
 <body>
     <div class="game-container">
         <!-- 게임 헤더 -->
         <header class="game-header">
-            <h1>미성숙한 사랑</h1>
+            <h1>미소녀 연애 시뮬레이션</h1>
             <div class="header-buttons">
                 <button id="menuBtn" class="header-btn">메뉴</button>
                 <button id="saveBtn" class="header-btn">저장</button>
@@ -41,25 +44,25 @@
             <div class="relationship-status">
                 <h3>관계도</h3>
                 <div class="relationship-bar">
-                    <span>지은 (전여친)</span>
+                    <span>서은 호감도</span>
                     <div class="bar">
-                        <div class="bar-fill" id="jieunsBar" style="width: 30%"></div>
+                        <div class="bar-fill" id="jieunsBar" style="width: 0%"></div>
                     </div>
-                    <span id="jieunScore">30/100</span>
+                    <span id="jieunScore">서은 호감도: 0</span>
                 </div>
                 <div class="relationship-bar">
-                    <span>민수 (전남친)</span>
+                    <span>자신감</span>
                     <div class="bar">
-                        <div class="bar-fill jealousy" id="minsuBar" style="width: 70%"></div>
+                        <div class="bar-fill confidence" id="minsuBar" style="width: 50%"></div>
                     </div>
-                    <span id="minsuScore">질투: 70</span>
+                    <span id="minsuScore">자신감: 50</span>
                 </div>
                 <div class="relationship-bar">
-                    <span>자기 신뢰도</span>
+                    <span>스트레스</span>
                     <div class="bar">
-                        <div class="bar-fill confidence" id="confidenceBar" style="width: 20%"></div>
+                        <div class="bar-fill jealousy" id="confidenceBar" style="width: 30%"></div>
                     </div>
-                    <span id="confidenceScore">20/100</span>
+                    <span id="confidenceScore">스트레스: 30</span>
                 </div>
             </div>
         </div>
@@ -67,8 +70,8 @@
         <!-- 시작 화면 -->
         <div id="startScreen" class="start-screen">
             <div class="game-title">
-                <h1>미성숙한 사랑</h1>
-                <p class="subtitle">현실적인 연애 이야기</p>
+                <h1>미소녀 연애 시뮬레이션</h1>
+                <p class="subtitle">Dating Simulator</p>
             </div>
             
             <div class="start-menu">
@@ -118,8 +121,24 @@
                 <button class="ending-btn" id="restartBtn">다시 시작</button>
             </div>
         </div>
+
+        <div class="sticky-note">
+            <div class="note-header">
+                <h3>💭 Comments / 댓글</h3>
+                <button class="add-note-btn" onclick="toggleNoteForm()">+</button>
+            </div>
+            <div class="note-form" id="noteForm" style="display: none;">
+                <textarea placeholder="피드백을 남겨주세요."></textarea>
+                <input type="text" placeholder="이름 (선택사항)">
+                <button onclick="submitNote()">댓글 작성</button>
+            </div>
+            <div class="notes-list" id="notesList">
+                <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
     </div>
 
     <script src="../../js/games-js/dating-sim.js"></script>
+    <script src="../../js/comments.js"></script>
 </body>
 </html> 

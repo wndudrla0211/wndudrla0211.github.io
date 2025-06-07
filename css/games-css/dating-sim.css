@@ -64,6 +64,8 @@ body {
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="sakura" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="%23ffb3d1" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23sakura)"/></svg>');
     display: flex;
     flex-direction: column;
+    min-height: calc(100vh - 60px);
+    overflow-y: auto;
 }
 
 /* 캐릭터 영역 */
@@ -141,10 +143,13 @@ body {
 
 /* 선택지 */
 .choice-container {
-    padding: 0 20px 20px;
+    padding: 0 20px 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: none;
+    overflow: visible;
+    flex-shrink: 0;
 }
 
 .choice-btn {

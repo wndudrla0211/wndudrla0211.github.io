@@ -15,6 +15,7 @@
     <title>Project 2 - Ju-Young Kim (Alex)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/comments.css">
 </head>
 <body>
     <header>
@@ -80,6 +81,21 @@
                             <img src="../largefile/images/game screenshots/cgt 255 alpha gameplay screenshot3.jpg" alt="Screenshot 3">
                         </div>
                     </div>
+
+                    <div class="sticky-note">
+                        <div class="note-header">
+                            <h3>💭 Comments / 댓글</h3>
+                            <button class="add-note-btn" onclick="toggleNoteForm()">+</button>
+                        </div>
+                        <div class="note-form" id="noteForm" style="display: none;">
+                            <textarea placeholder="피드백을 남겨주세요."></textarea>
+                            <input type="text" placeholder="이름 (선택사항)">
+                            <button onclick="submitNote()">댓글 작성</button>
+                        </div>
+                        <div class="notes-list" id="notesList">
+                            <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
+                        </div>
+                    </div>
                 </div>
 
                 <div class="game-info-sidebar">
@@ -128,7 +144,6 @@
                     </div>
                 </div>
 
-               
                 <div class="game-description">
                     <h2>About This Game</h2>
                     <p>Fast-paced free-for-all deathmatch FPS where players compete individually in intense arena combat. Each match is a high-energy battle where players choose unique heroes and fight to achieve the highest elimination score. The game rewards quick reflexes, tactical positioning, and effective use of hero abilities in chaotic multiplayer combat scenarios.
@@ -166,7 +181,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- 다운로드 팝업 추가 -->
@@ -448,5 +463,7 @@
         }
     });
     </script>
+    
+    <script src="../js/comments.js"></script>
 </body>
 </html>

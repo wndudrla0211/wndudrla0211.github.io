@@ -15,6 +15,8 @@
     <title>Games - Ju-Young Kim (Alex)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/games.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/comments.css">
 
 </head>
 <body>
@@ -121,10 +123,10 @@
                 <div class="game-card">
                     <a href="project5.html">
                         <div class="game-image">
-                            <img src="../largefile/images/game screenshots/love/love3.jpg" alt="미성숙한 사랑" onerror="this.style.background='linear-gradient(135deg, #ff6b9d 0%, #667eea 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💔💭';">
+                            <img src="../largefile/images/game screenshots/love/love1.jpg" alt="미성숙한 사랑" onerror="this.style.background='linear-gradient(135deg, #ff6b9d 0%, #667eea 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💔💭';">
                         </div>
                         <div class="game-info">
-                            <h2>미성숙한 사랑</h2>
+                            <h2>Dating Simulator (Korean)</h2>
                             <div class="game-meta">
                                 <span class="game-date">Project 5</span>
                             </div>
@@ -141,10 +143,10 @@
                 <div class="game-card">
                     <a href="project5-en.html">
                         <div class="game-image">
-                            <img src="../largefile/images/game screenshots/love/love2.jpg" alt="Immature Love (English)" onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #ff6b9d 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💭💔';">
+                            <img src="../largefile/images/game screenshots/love/love3.jpg" alt="Immature Love (English)" onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #ff6b9d 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💭💔';">
                         </div>
                         <div class="game-info">
-                            <h2>Immature Love (EN)</h2>
+                            <h2>Dating Simulator (English)</h2>
                             <div class="game-meta">
                                 <span class="game-date">Project 5</span>
                             </div>
@@ -158,9 +160,46 @@
                         </div>
                     </a>
                 </div>
+                <div class="game-card">
+                    <a href="games-html/lego-builder.html">
+                        <div class="game-image" style="background: linear-gradient(135deg, #e74c3c 0%, #3498db 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; min-height: 200px;">
+                            🧱
+                        </div>
+                        <div class="game-info">
+                            <h2>LEGO Dream Builder</h2>
+                            <div class="game-meta">
+                                <span class="game-date">Project 6</span>
+                            </div>
+                            <div class="game-tags">
+                                <span>Simulation</span>
+                                <span>Building</span>
+                                <span>Creative</span>
+                                <span>Collection</span>
+                                <span>Browser Game</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sticky-note">
+                <div class="note-header">
+                    <h3>💭 Comments / 댓글</h3>
+                    <button class="add-note-btn" onclick="toggleNoteForm()">+</button>
+                </div>
+                <div class="note-form" id="noteForm" style="display: none;">
+                    <textarea placeholder="피드백을 남겨주세요."></textarea>
+                    <input type="text" placeholder="이름 (선택사항)">
+                    <button onclick="submitNote()">댓글 작성</button>
+                </div>
+                <div class="notes-list" id="notesList">
+                    <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
+                </div>
             </div>
         </section>
     </main>
+
+    <script src="../js/comments.js"></script>
 
     <footer>
         <p>&copy; 2025 Ju-Young Kim (Alex). All rights reserved.</p>

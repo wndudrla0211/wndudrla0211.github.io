@@ -1,0 +1,108 @@
+.sticky-note {
+    background: #fff9c4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.note-header h3 {
+    color: #333;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.add-note-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.note-form {
+    margin-bottom: 10px;
+}
+
+.note-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.note-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.note-form button {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.notes-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.note-item {
+    background: rgba(255,255,255,0.7);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    position: relative;
+}
+
+.note-item .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: #ff6b9d;
+    cursor: pointer;
+    font-size: 1.2em;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.note-item .delete-btn:hover {
+    opacity: 1;
+}
+
+.note-item .note-name {
+    color: #ff6b9d;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.note-item .note-content {
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.note-item .note-date {
+    color: #666;
+    font-size: 0.8em;
+} 
