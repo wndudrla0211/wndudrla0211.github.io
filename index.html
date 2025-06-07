@@ -104,7 +104,7 @@
                 </a>
                 
                 <a href="html/project5(featured).html" class="featured-card">
-                    <h2>Immature Love</h2>
+                    <h2>Dating Simulator</h2>
                     <p>Project 3</p>
                     <div class="tags">
                         <span class="tag">Visual Novel</span>
@@ -167,22 +167,7 @@
             <p><i class="fab fa-discord"></i> bangman6032</p>
         </div>
     </div>
-    <div class="overlay" id="overlay"></div>
-    <div class="construction-popup" id="constructionPopup">
-        <h2>🚧 Under Construction🚧<br>
-            🚧웹사이트 업데이트 진행중🚧 </h2>
-        <p>
-            This website is currently under development. Some features may not work properly.<br>
-            현재 웹사이트를 업데이트 중입니다.<br>
-            일부 기능이 정상적으로 작동하지 않을 수 있습니다. 6글자.
-        </p>
-        <div class="password-section">
-            <input type="password" id="popupPassword" placeholder="Enter Password / 비밀번호를 입력하세요">
-            <p id="passwordError" style="color: red; display: none;">Incorrect password / 비밀번호가 틀렸습니다.</p>
-        </div>
-        <p class="last-updated">Last Updated: 2025.06.07</p>
-        <button class="popup-close" onclick="checkPassword()">OK / 확인</button>
-    </div>
+  
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -191,15 +176,6 @@
             document.getElementById('constructionPopup').style.display = 'block';
         }, 100);
     });
-
-    function checkPassword() {
-        const password = document.getElementById('popupPassword').value;
-        if (password === '991001') {
-            closePopup();
-        } else {
-            document.getElementById('passwordError').style.display = 'block';
-        }
-    }
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';

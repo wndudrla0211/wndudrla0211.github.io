@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>미소녀 연애 시뮬레이션</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/games.css">
-    <link rel="stylesheet" href="../../css/comments.css">
     <link rel="stylesheet" href="../../css/games-css/dating-sim.css">
 </head>
 <body>
@@ -121,24 +118,8 @@
                 <button class="ending-btn" id="restartBtn">다시 시작</button>
             </div>
         </div>
-
-        <div class="sticky-note">
-            <div class="note-header">
-                <h3>💭 Comments / 댓글</h3>
-                <button class="add-note-btn" onclick="toggleNoteForm()">+</button>
-            </div>
-            <div class="note-form" id="noteForm" style="display: none;">
-                <textarea placeholder="피드백을 남겨주세요."></textarea>
-                <input type="text" placeholder="이름 (선택사항)">
-                <button onclick="submitNote()">댓글 작성</button>
-            </div>
-            <div class="notes-list" id="notesList">
-                <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
-            </div>
-        </div>
     </div>
 
     <script src="../../js/games-js/dating-sim.js"></script>
-    <script src="../../js/comments.js"></script>
 </body>
 </html> 
