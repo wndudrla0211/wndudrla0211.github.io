@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JTGZ5J5PS4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JTGZ5J5PS4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Game - Ju-Young Kim (Alex)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="../html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="../html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
+                <li><a href="../resume/Resume 2025.02.17 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <nav>
+            <a href="../index.html">Home</a>
+            <span class="separator">></span>
+            <a href="../index.html#categories">Categories</a>
+            <span class="separator">></span>
+            <a href="../html/games.html">Games</a>
+            <span class="separator">></span>
+            <a href="project5.html">Mobile Game</a>
+        </nav>
+    </div>
+
+    <main>
+        <h1 class="page-title">Mobile Game</h1>
+        <section class="game-detail">
+            <div class="game-content">
+                <div class="game-media">
+                    <div class="main-media">
+                        <img id="mainImage" src="../largefile/images/game screenshots/mobile/screenshot1.png" alt="Mobile Game Screenshot">
+                    </div>
+                    <div class="media-strip">
+                        <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot1.png', this)">
+                            <img src="../largefile/images/game screenshots/mobile/screenshot1.png" alt="Main Screenshot">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot2.png', this)">
+                            <img src="../largefile/images/game screenshots/mobile/screenshot2.png" alt="Screenshot 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/mobile/screenshot3.png', this)">
+                            <img src="../largefile/images/game screenshots/mobile/screenshot3.png" alt="Screenshot 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-info-sidebar">
+                    <div class="game-actions">
+                        <a href="#" class="play-button">Coming Soon</a>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Game Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">In Development</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Platform:</span>
+                            <span class="value">Android, iOS</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Genre:</span>
+                            <span class="value">Casual, Puzzle</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Made with:</span>
+                            <span class="value">Unity</span>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <h3>Development Team</h3>
+                        <div class="team-member">
+                            <span class="role">Design:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Programming:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="role">Art:</span>
+                            <span class="name">Ju-Young Kim (Alex)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-description">
+                    <h2>About This Game</h2>
+                    <p>A mobile puzzle game that challenges players with unique and engaging mechanics. Perfect for quick gaming sessions on the go!</p>
+                    <p>
+                        독특하고 매력적인 메카닉으로 플레이어에게 도전을 제공하는 모바일 퍼즐 게임입니다. 이동 중에도 즐길 수 있는 간단한 게임 세션을 제공합니다!
+                    </p>
+
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Simple yet challenging gameplay / 간단하지만 도전적인 게임플레이</li>
+                        <li>Beautiful minimalist design / 아름다운 미니멀리스트 디자인</li>
+                        <li>Progressive difficulty / 점진적인 난이도 상승</li>
+                        <li>No ads or in-app purchases / 광고나 인앱 결제 없음</li>
+                    </ul>
+
+                    <div class="development-status">
+                        <h2>Development Status</h2>
+                        <p>Currently in active development. The game will be available on both Android and iOS platforms.</p>
+                        <p>
+                            현재 개발 진행 중입니다. 안드로이드와 iOS 플랫폼 모두에서 출시될 예정입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function changeImage(src, thumbnail) {
+        document.getElementById('mainImage').src = src;
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        thumbnail.classList.add('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const currentIndex = Array.from(thumbnails).findIndex(thumb => thumb.classList.contains('active'));
+        
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            thumbnails[currentIndex - 1].click();
+        } else if (e.key === 'ArrowRight' && currentIndex < thumbnails.length - 1) {
+            thumbnails[currentIndex + 1].click();
+        }
+    });
+    </script>
+</body>
+</html> 
