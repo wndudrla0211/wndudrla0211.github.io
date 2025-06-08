@@ -184,22 +184,15 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // 로컬 스토리지에서 팝업 표시 여부 확인
-        const hasSeenPopup = localStorage.getItem('hasSeenConstructionPopup');
-        
-        if (!hasSeenPopup) {
-            setTimeout(function() {
-                document.getElementById('overlay').style.display = 'block';
-                document.getElementById('constructionPopup').style.display = 'block';
-            }, 100);
-        }
+        setTimeout(function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('constructionPopup').style.display = 'block';
+        }, 100);
     });
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
         document.getElementById('constructionPopup').style.display = 'none';
-        // 팝업을 닫을 때 로컬 스토리지에 표시 여부 저장
-        localStorage.setItem('hasSeenConstructionPopup', 'true');
     }
     </script>
 
