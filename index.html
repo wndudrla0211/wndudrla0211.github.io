@@ -29,6 +29,19 @@
     </header>
 
     <main>
+        <div class="overlay" id="overlay"></div>
+        <div class="construction-popup" id="constructionPopup">
+            <h2>🚧 Under Construction🚧<br>
+                🚧게임 업데이트 진행중🚧 </h2>
+            <p>
+                This portfolio and games are currently under development. <br>
+                Some features may not work properly.<br>
+                현재 포트폴리오 및 게임을 업데이트 중입니다.<br>
+                일부 기능이 정상적으로 작동하지 않을 수 있습니다.
+            </p>
+            <p class="last-updated">Last Updated: 2025.06.07</p>
+            <button class="popup-close" onclick="closePopup()">OK / 확인</button>
+        </div>
         <section id="overview">
             <div class="profile">
                 <div class="profile-info">
@@ -171,17 +184,86 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('constructionPopup').style.display = 'block';
-        }, 100);
+        // 로컬 스토리지에서 팝업 표시 여부 확인
+        const hasSeenPopup = localStorage.getItem('hasSeenConstructionPopup');
+        
+        if (!hasSeenPopup) {
+            setTimeout(function() {
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('constructionPopup').style.display = 'block';
+            }, 100);
+        }
     });
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
         document.getElementById('constructionPopup').style.display = 'none';
+        // 팝업을 닫을 때 로컬 스토리지에 표시 여부 저장
+        localStorage.setItem('hasSeenConstructionPopup', 'true');
     }
     </script>
+
+    <style>
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+    }
+
+    .construction-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(25, 25, 25, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        z-index: 1000;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 90%;
+    }
+
+    .construction-popup h2 {
+        margin-bottom: 15px;
+        font-size: 1.8em;
+        color: #ff6b9d;
+    }
+
+    .construction-popup p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .last-updated {
+        color: #8f98a0;
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    .popup-close {
+        background: #ff6b9d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s ease;
+    }
+
+    .popup-close:hover {
+        background: #ff4d8d;
+    }
+    </style>
 
 </body>
 </html>

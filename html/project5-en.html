@@ -42,6 +42,23 @@
     </div>
 
     <main>
+        <div class="overlay" id="overlay"></div>
+        <div class="construction-popup" id="constructionPopup">
+            <h2>🚧 Under Construction🚧<br>
+                🚧Game Update in Progress🚧 </h2>
+            <p>
+                This portfolio and games are currently under development. <br>
+                Some features may not work properly.<br>
+                현재 포트폴리오 및 게임을 업데이트 중입니다.<br>
+                일부 기능이 정상적으로 작동하지 않을 수 있습니다.
+            </p>
+            <div class="password-section">
+                <input type="password" id="popupPassword" placeholder="Enter Password / 비밀번호를 입력하세요">
+                <p id="passwordError" style="color: red; display: none;">Incorrect password / 비밀번호가 틀렸습니다.</p>
+            </div>
+            <p class="last-updated">Last Updated: 2025.06.07</p>
+            <button class="popup-close" onclick="checkPassword()">OK / 확인</button>
+        </div>
         <h1 class="page-title">Dating Simulator (미소녀 연애 시뮬레이션)</h1>
         <section class="game-detail">
             <div class="game-content">
@@ -262,6 +279,90 @@
         color: #ff6b9d;
         margin-bottom: 15px;
     }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+    }
+
+    .construction-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(25, 25, 25, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        z-index: 1000;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 90%;
+    }
+
+    .construction-popup h2 {
+        margin-bottom: 15px;
+        font-size: 1.8em;
+        color: #ff6b9d;
+    }
+
+    .construction-popup p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .last-updated {
+        color: #8f98a0;
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    .popup-close {
+        background: #ff6b9d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s ease;
+    }
+
+    .popup-close:hover {
+        background: #ff4d8d;
+    }
+
+    .password-section {
+        margin: 10px 0;
+    }
+
+    .password-section input {
+        width: 80%;
+        padding: 8px;
+        margin-bottom: 5px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 0.9em;
+    }
+
+    .password-section input::placeholder {
+        color: #8f98a0;
+    }
+
+    .password-section input:focus {
+        outline: none;
+        border-color: #ff6b9d;
+    }
     </style>
     
     <script>
@@ -270,7 +371,25 @@
         mainVideo.addEventListener('error', function(e) {
             console.error('비디오 로드 에러:', e.target.error);
         });
+        setTimeout(function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('constructionPopup').style.display = 'block';
+        }, 100);
     });
+
+    function checkPassword() {
+        const password = document.getElementById('popupPassword').value;
+        if (password === '991001') {
+            closePopup();
+        } else {
+            document.getElementById('passwordError').style.display = 'block';
+        }
+    }
+
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('constructionPopup').style.display = 'none';
+    }
 
     function changeImage(src, thumbnail) {
         const mainImage = document.getElementById('mainImage');
