@@ -15,7 +15,6 @@
     <title>Dating Simulator (미소녀 연애 시뮬레이션) - Ju-Young Kim (Alex)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
-    <link rel="stylesheet" href="../css/comments.css">
 
 </head>
 <body>
@@ -25,7 +24,7 @@
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="../html/about.html" class="nav-icon"><i class="fas fa-user"></i> About Me</a></li>
                 <li><a href="../html/blog.html" class="nav-icon"><i class="fas fa-dumbbell"></i> Workout</a></li>
-                <li><a href="../resume/Resume 2025.02.17 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
+                <li><a href="../resume/Resume 2025.06.08 (animation+game dev).pdf" target="_blank" class="resume-link">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -52,13 +51,13 @@
             <p>
                 This game is currently under development. Some features may not work properly.<br>
                 현재 게임을 업데이트 중입니다.<br>
-                일부 기능이 정상적으로 작동하지 않을 수 있습니다. 6글자.
+                일부 기능이 정상적으로 작동하지 않을 수 있습니다. 7글자.
             </p>
             <div class="password-section">
                 <input type="password" id="popupPassword" placeholder="Enter Password / 비밀번호를 입력하세요">
                 <p id="passwordError" style="color: red; display: none;">Incorrect password / 비밀번호가 틀렸습니다.</p>
             </div>
-            <p class="last-updated">Last Updated: 2025.06.07</p>
+            <p class="last-updated">Last Updated: 2025.06.08</p>
             <button class="popup-close" onclick="checkPassword()">OK / 확인</button>
         </div>
 
@@ -74,7 +73,6 @@
                         <div class="media-fallback">
                             Play the game directly!
                         </div>
-                        
                     </div>
                     <div class="media-strip">
                         <div class="thumbnail active" onclick="changeImage('../largefile/images/game screenshots/love/love1.jpg', this)">
@@ -88,21 +86,6 @@
                         </div>
                         <div class="thumbnail" onclick="changeImage('../largefile/images/game screenshots/love/love4.jpg', this)">
                             <img src="../largefile/images/game screenshots/love/love4.jpg" alt="Gameplay" onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #ff6b9d 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='2rem'; this.innerHTML='💭';">
-                        </div>
-                    </div>
-
-                    <div class="sticky-note">
-                        <div class="note-header">
-                            <h3>💭 Comments / 댓글</h3>
-                            <button class="add-note-btn" onclick="toggleNoteForm()">+</button>
-                        </div>
-                        <div class="note-form" id="noteForm" style="display: none;">
-                            <textarea placeholder="피드백을 남겨주세요."></textarea>
-                            <input type="text" placeholder="이름 (선택사항)">
-                            <button onclick="submitNote()">댓글 작성</button>
-                        </div>
-                        <div class="notes-list" id="notesList">
-                            <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
                         </div>
                     </div>
                 </div>
@@ -618,7 +601,7 @@
 
     function checkPassword() {
         const password = document.getElementById('popupPassword').value;
-        if (password === '991001') {
+        if (password === '1080221') {
             closePopup();
         } else {
             document.getElementById('passwordError').style.display = 'block';
