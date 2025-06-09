@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2개의 진실, 1개의 거짓말</title>
+    <link rel="stylesheet" href="../../css/games-css/two-truths-game.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- 로비 화면 -->
+    <div id="lobby-screen" class="screen">
+        <div class="lobby-container">
+            <h1>2개의 진실, 1개의 거짓말</h1>
+            <div class="nickname-setup">
+                <input type="text" id="nickname-input" placeholder="닉네임을 입력하세요">
+            </div>
+            <div class="room-options">
+                <button id="create-room">새 게임 만들기</button>
+                <div class="join-room">
+                    <input type="text" id="room-code" placeholder="방 코드">
+                    <button id="join-room">참여하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <div class="room-info">
+                <span id="room-code-display"></span>
+                <span id="round-info">라운드: 1</span>
+            </div>
+            <div class="player-list">
+                <h3>플레이어</h3>
+                <div id="players"></div>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <!-- 진술자 화면 -->
+            <div id="storyteller-view" class="game-view hidden">
+                <h2>당신의 차례입니다!</h2>
+                <p class="instruction">3가지 진술을 입력하세요 (2개는 진실, 1개는 거짓말)</p>
+                <div class="statements-input">
+                    <div class="statement-box">
+                        <input type="text" class="statement-input" placeholder="첫 번째 진술">
+                        <label class="truth-label">진실</label>
+                    </div>
+                    <div class="statement-box">
+                        <input type="text" class="statement-input" placeholder="두 번째 진술">
+                        <label class="truth-label">진실</label>
+                    </div>
+                    <div class="statement-box">
+                        <input type="text" class="statement-input" placeholder="세 번째 진술">
+                        <label class="lie-label">거짓말</label>
+                    </div>
+                </div>
+                <button id="submit-statements">제출하기</button>
+            </div>
+
+            <!-- 관전자 화면 -->
+            <div id="spectator-view" class="game-view hidden">
+                <h2 id="current-storyteller"></h2>
+                <p class="instruction">어느 것이 거짓말일까요?</p>
+                <div class="statements-display">
+                    <div class="statement-card" data-index="0">
+                        <p class="statement-text"></p>
+                        <button class="vote-button">이것이 거짓말!</button>
+                    </div>
+                    <div class="statement-card" data-index="1">
+                        <p class="statement-text"></p>
+                        <button class="vote-button">이것이 거짓말!</button>
+                    </div>
+                    <div class="statement-card" data-index="2">
+                        <p class="statement-text"></p>
+                        <button class="vote-button">이것이 거짓말!</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 결과 화면 -->
+            <div id="result-view" class="game-view hidden">
+                <h2>결과 발표!</h2>
+                <div class="statements-result">
+                    <div class="statement-result" data-index="0">
+                        <p class="statement-text"></p>
+                        <span class="result-label"></span>
+                    </div>
+                    <div class="statement-result" data-index="1">
+                        <p class="statement-text"></p>
+                        <span class="result-label"></span>
+                    </div>
+                    <div class="statement-result" data-index="2">
+                        <p class="statement-text"></p>
+                        <span class="result-label"></span>
+                    </div>
+                </div>
+                <div class="score-update">
+                    <h3>점수 현황</h3>
+                    <div id="score-board"></div>
+                </div>
+                <button id="next-round">다음 라운드</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/two-truths-game.js"></script>
+</body>
+</html> 
