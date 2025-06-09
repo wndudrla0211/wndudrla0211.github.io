@@ -159,9 +159,10 @@ main {
     justify-content: flex-start;
     width: auto;
     margin-top: 35.5px;
-    margin-right: 50px;
-    margin-left: 0;
-    max-width: 500px;
+    margin-right: 0;
+    margin-left: 30px;
+    max-width: 600px;
+    position: relative;
 }
 
 .skills span {
@@ -173,6 +174,7 @@ main {
     text-align: center;
     display: inline-block;
     white-space: nowrap;
+    margin: 2px;
 }
 
 .project-grid {
@@ -1010,4 +1012,3 @@ h2 {
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
 }
-
