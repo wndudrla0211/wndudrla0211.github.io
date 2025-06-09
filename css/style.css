@@ -134,7 +134,7 @@ nav ul li a:hover {
 main {
     flex: 1;
     width: 100%;
-    padding: 0 4rem;
+    padding: 0 2rem;
     margin: 0;
     box-sizing: border-box;
 }
@@ -171,8 +171,7 @@ main {
     margin-top: 35.5px;
     margin-right: 0;
     margin-left: 30px;
-    max-width: 600px;
-    position: relative;
+    max-width: 590px;
 }
 
 .skills span {
@@ -459,7 +458,7 @@ h2 {
 
 .social-icons {
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 0;
     list-style: none;
     padding: 0;
@@ -472,13 +471,13 @@ h2 {
 /* Instagram까지의 아이콘들 (상단 가로줄) */
 .social-icons li:nth-child(-n+6) {
     margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: 20px;
+    margin-right: 3px;
 }
 
 /* Instagram 이후 아이콘들 (세로줄) */
 .social-icons li:nth-child(n+7) {
     position: absolute;
-    right: 18px;
+    right: 1px;
     width: auto;
 }
 
@@ -1021,4 +1020,33 @@ h2 {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
+}
+
+.education-text {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.education-text .university {
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.education-text .degree {
+    color: #666;
+    display: block;
+    margin: 3px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.education-text .degree:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
 }
