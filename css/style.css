@@ -9,7 +9,7 @@
 
 /* Global Styles */
 body {
-    font-family: 'HELVETNC', sans-serif;
+    font-family: 'HELVETNC', sans-serif !important;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -22,6 +22,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Font Awesome 아이콘 제외 */
+.fas, .fab {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands' !important;
+}
+
+/* 모든 텍스트 요소에 HELVETNC 폰트 적용 */
+*:not(.fas):not(.fab) {
+    font-family: 'HELVETNC', sans-serif !important;
 }
 
 /* Layout */

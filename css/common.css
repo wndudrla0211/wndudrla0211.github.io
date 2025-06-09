@@ -1,0 +1,17 @@
+/* Font Face */
+@font-face {
+    font-family: 'HELVETNC';
+    src: url('../fonts/HELVETNC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Font Styles */
+* {
+    font-family: 'HELVETNC', sans-serif !important;
+}
+
+/* Override any other font-family declarations */
+h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, textarea, select {
+    font-family: 'HELVETNC', sans-serif !important;
+} 
