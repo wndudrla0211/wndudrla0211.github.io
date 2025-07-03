@@ -683,7 +683,7 @@ h2 {
 
 .featured-card[href="html/project1.html"] {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
-                url('../largefile/images/game screenshots/screen1.png');
+                url('../largefile/images/game screenshots/siggd/siggd.png');
     background-size: cover;
     background-position: center;
 }
